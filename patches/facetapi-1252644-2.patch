@@ -1,0 +1,128 @@
+diff --git a/facetapi.module b/facetapi.module
+index af0ffe0..ce8c6d1 100644
+--- a/facetapi.module
++++ b/facetapi.module
+@@ -429,30 +429,36 @@ function facetapi_facet_load($facet_name, $searcher) {
+  *     count setting.
+  */
+ function facetapi_get_searcher_info() {
+-  $searcher_info = module_invoke_all('facetapi_searcher_info');
+-  foreach ($searcher_info as $searcher => $info) {
+-    // @see http://drupal.org/node/1167974
+-    // Converts "type" to an array and stores in "types".
+-    if (isset($info['type']) && !isset($info['types'])) {
+-      $info['types'] = array($info['type']);
+-    }
++  $searcher_info = array();
++  foreach (module_implements('facetapi_searcher_info') as $module) {
++    // Iterates over the module's searcher definition.
++    foreach ((array) module_invoke($module, 'facetapi_searcher_info') as $searcher => $info) {
++      // @see http://drupal.org/node/1167974
++      // Converts "type" to an array and stores in "types".
++      if (isset($info['type']) && !isset($info['types'])) {
++        $info['types'] = array($info['type']);
++      }
+ 
+-    $info += array(
+-      'name' => $searcher,
+-      'path' => '',
+-      'types' => array('node'),
+-      'url_processor' => 'standard',
+-      'supports facet missing' => FALSE,
+-      'supports facet mincount' => FALSE,
+-    );
++      $info += array(
++        'module' => $module,
++        'name' => $searcher,
++        'path' => '',
++        'types' => array('node'),
++        'url_processor' => 'standard',
++        'supports facet missing' => FALSE,
++        'supports facet mincount' => FALSE,
++      );
+ 
+-    // @see http://drupal.org/node/1167974
+-    // Makes sure old style "type" is present.
+-    if (!isset($info['type'])) {
+-      $info['type'] = $info['types'][key($info['types'])];
+-    }
++      // @see http://drupal.org/node/1167974
++      // Makes sure old style "type" is present.
++      if (!isset($info['type'])) {
++        $info['type'] = $info['types'][key($info['types'])];
++      }
+ 
+-    $searcher_info[$searcher] = $info;
++      // Maps "types" so we can do faster lookups via isset().
++      $info['types'] = drupal_map_assoc($info['types']);
++      $searcher_info[$searcher] = $info;
++    }
+   }
+ 
+   drupal_alter('facetapi_searcher_info', $searcher_info);
+diff --git a/plugins/facetapi/adapter.inc b/plugins/facetapi/adapter.inc
+index 3241e40..88cc955 100644
+--- a/plugins/facetapi/adapter.inc
++++ b/plugins/facetapi/adapter.inc
+@@ -68,6 +68,13 @@ abstract class FacetapiAdapter {
+   protected $processed = FALSE;
+ 
+   /**
++   * Stores the search path so we only need to calculate it once.
++   *
++   * @var string
++   */
++  protected $searchPath;
++
++  /**
+    * Constructor, sets searcher and type of content being indexed.
+    *
+    * @param array $searcher_info
+@@ -292,6 +299,26 @@ abstract class FacetapiAdapter {
+   }
+ 
+   /**
++   * Returns the search path.
++   *
++   * @return string
++   *   A string containing the search path.
++   *
++   * @todo D8 should provide an API function for this.
++   */
++  public function getSearchPath() {
++    if (NULL === $this->searchPath) {
++      if ($path = module_invoke($this->info['module'] . '_search', 'search_info')) {
++        $this->searchPath = 'search/' . $path['path'];
++        if (!isset($_GET['keys']) && ($keys = $this->getSearchKeys())) {
++          $this->searchPath .= '/' . $keys;
++        }
++      }
++    }
++    return $this->searchPath;
++  }
++
++  /**
+    * Sets the search keys.
+    *
+    * @param string $keys
+@@ -1089,6 +1116,7 @@ class FacetapiFacetProcessor {
+     // Build array defaults.
+     $defaults = array(
+       '#markup' => '',
++      '#path' => $this->facet->getAdapter()->getSearchPath(),
+       '#html' => FALSE,
+       '#indexed_value' => '',
+       '#count' => 0,
+diff --git a/plugins/facetapi/widget_links.inc b/plugins/facetapi/widget_links.inc
+index cd75f41..3ec71c2 100644
+--- a/plugins/facetapi/widget_links.inc
++++ b/plugins/facetapi/widget_links.inc
+@@ -78,7 +78,7 @@ class FacetapiWidgetLinks extends FacetapiWidget {
+       // Initializes variables passed to theme hook.
+       $variables = array(
+         'text' => $item['#markup'],
+-        'path' => $_GET['q'],
++        'path' => $item['#path'],
+         'count' => $item['#count'],
+         'options' => array(
+           'attributes' => array('class' => $this->getItemClasses()),
