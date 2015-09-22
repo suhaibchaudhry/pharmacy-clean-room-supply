@@ -30,9 +30,15 @@ regions[preface_first] = Preface First
 regions[preface_second] = Preface Second
 regions[preface_third] = Preface Third
 
+regions[preface_two_first] = Preface Two First
+regions[preface_two_second] = Preface Two Second
+regions[preface_two_third] = Preface Two Third
+
 regions[postscript_first] = Postscript First
 regions[postscript_second] = Postscript Second
 regions[postscript_third] = Postscript Third
+
+regions[postscript_two_first] = Postscript Two First
 
 regions[footer_first] = Footer First
 regions[footer_second] = Footer Second
@@ -48,8 +54,10 @@ zones[branding] = Branding
 zones[menu] = Menu
 zones[header] = Header
 zones[preface] = Preface
+zones[preface2] = Preface Two
 zones[content] = Content
 zones[postscript] = Postscript
+zones[postscript2] = Postscript Two
 zones[footer] = Footer first
 zones[footer2] = Footer second
 
@@ -428,4 +436,3 @@ version = "7.x-1.0"
 core = "7.x"
 project = "pharmacycleanroomsupply"
 datestamp = "1426860543"
-

@@ -442,3 +442,282 @@ div.messages.commerce-add-to-cart-confirmation {
     background:url('../images/btn_google.png') no-repeat;
   }
 }
+
+body {
+  background: #fff;
+}
+
+
+
+.zone-preface2-wrapper {
+  h1#page-title {
+    margin: 10px;
+  }
+}
+
+.region-sidebar-first {
+  .block-facetapi {
+    border-top: 5px solid #009BFD;
+    margin-top: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.page-products {
+  .view-display-products {
+    li.views-row {
+      width: 244px;
+      border: 1px solid #eaeaea;
+      margin: 0 10px 10px 0;
+      padding: 20px;
+    }
+    li.views-row:nth-child(3n+0) {
+      margin-right: 0;
+    }
+  }
+}
+
+
+.zone-menu {
+  .block-menu {
+    margin: 0 0 15px 0;
+    float: right;
+      ul.menu {
+        li.leaf {
+          a.active, a:hover {
+            border: none;
+            background: #009bfd;
+            border-bottom: 5px solid #2d2d2d;
+            color: #fff;
+          }
+          a {
+            background-color: transparent;
+            border: none;
+            }
+          }
+          li.first, li.last {
+            a {
+              border-left: none !important;
+              border-right: none !important;
+              border: none;
+            }
+            a.active, a:hover {
+              border: none;
+              background: #009bfd;
+              border-bottom: 5px solid #2d2d2d;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+/* .zone-menu {
+  .second-menu {
+    ul {
+      li.first {
+        a {
+          border-left: none !important;
+        }
+      }
+      li.last {
+        a {
+          border-right: none !important;
+        }
+      }
+      li {
+        a {
+          border: none;
+        }
+      }
+      li {
+        a.active, a.hover {
+        color: #000 !important;
+        background-color: transparent !important;
+        border-top: none !important;
+        border-bottom: none !important;
+      }
+    }
+    }
+  }
+}
+*/
+
+.zone-preface-wrapper {
+  background-image: url("/sites/pharmacycleanroomsupply.com/themes/pharmacycleanroomsupply/images/default-header-image.jpg");
+  height: 160px;
+  width: 100%;
+  background-repeat: no-repeat;
+    .zone-preface {
+      background: transparent;
+    }
+}
+
+.zone-preface2-wrapper {
+  background: rgba(0, 0, 0, 0.52);
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 62px;
+}
+
+.zone-header {
+  width: 100% !important;
+  .region-header-first {
+    width: 100% !important;
+    margin: 0;
+  }
+}
+
+.zone-user-wrapper {
+  background: #f3f3f3;
+}
+
+
+.region-user-first {
+    .block-1 {
+      float:left;
+      .top-address, .top-phone {
+        float:left;
+        margin: 8px 10px 0 0;
+      }
+    }
+}
+
+.section-footer {
+  margin: 30px 0 0 0;
+  .block-menu-footer-navigation {
+    li.expanded {
+      width: 25%;
+      padding: 0;
+      span {
+        background: #009bfd;
+        padding: 10px;
+      }
+    }
+  }
+  .zone-footer2-wrapper {
+    .block {
+      .facebook {
+        background-image: url("../images/facebook.png");
+        text-indent: -9999px;
+        height: 44px;
+        width: 39px;
+        background-repeat: no-repeat;
+        float: left;
+      }
+      .twitter {
+        background-image: url("../images/twitter.png");
+        text-indent: -9999px;
+        height: 44px;
+        width: 39px;
+        background-repeat: no-repeat;
+        float: left;
+      }
+      .youtube {
+        background-image: url("../images/youtube.png");
+        text-indent: -9999px;
+        height: 44px;
+        width: 39px;
+        background-repeat: no-repeat;
+        float: left;
+      }
+      .googleplus {
+        background-image: url("../images/googleplus.png");
+        text-indent: -9999px;
+        height: 39px;
+        width: 39px;
+        background-repeat: no-repeat;
+        float: left;
+      }
+    }
+  }
+}
+
+
+.block-views-product-category-blocks-block {
+  h2 {
+    background: #009bfd;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    color: #fff;
+  }
+  .views-row {
+    float: left;
+    margin: 0 10px 0 0;
+    position: relative;
+    .views-field-name {
+      background: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      a:link, a:visited {
+        color: #fff;
+      }
+    }
+  }
+  .views-row-last {
+    margin: 0;
+  }
+}
+
+.zone-postscript2-wrapper {
+  background: #464646;
+}
+
+.block-webform-client-block-18 {
+  padding: 20px 0;
+  h2 {
+    color: #fff;
+  }
+  .form-item {
+    input, textarea {
+      background: #959595;
+      border: none;
+      padding: 10px;
+    }
+    label {
+      padding: 7px 10px;
+      color: #fff;
+    }
+  }
+}
+
+
+.region-postscript-second {
+  .block {
+    position: relative;
+    float: left;
+    margin-top: 7px;
+    h2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+    }
+  }
+  .block-block-3 {
+    margin-right: 7px;
+    .front-sign-up {
+      background-image: url("../images/sign-up.png");
+      width: 530px;
+      height: 350px;
+      text-indent: -9999px;
+
+    }
+  }
+  .block-block-4 {
+    .learn-about-fs {
+      background-image: url("../images/about-image.png");
+      width: 643px;
+      height: 350px;
+      text-indent: -9999px;
+    }
+  }
+}
