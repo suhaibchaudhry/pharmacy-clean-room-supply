@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,600,300);
+
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 /* Override Omega */
@@ -445,9 +447,18 @@ div.messages.commerce-add-to-cart-confirmation {
 
 body {
   background: #fff;
+  font-family: 'Open Sans', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
 
+.front, .page-products, .node-type-product-display, .page-cart, .page-checkout {
+  .zone-preface-wrapper {
+    display: none;
+  }
+}
 
 .zone-preface2-wrapper {
   h1#page-title {
