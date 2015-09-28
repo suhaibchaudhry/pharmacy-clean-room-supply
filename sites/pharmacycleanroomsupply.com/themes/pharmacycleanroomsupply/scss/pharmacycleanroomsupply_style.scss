@@ -472,6 +472,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-left: 0;
     padding-left: 0;
+
+    h2.block-title {
+      font-weight: normal;
+    }
+
+    ul li a{
+      color: #000;
+      font-weight: normal;
+    }
   }
 }
 
@@ -482,6 +491,22 @@ h1, h2, h3, h4, h5, h6 {
       border: 1px solid #eaeaea;
       margin: 0 10px 10px 0;
       padding: 20px;
+
+      article {
+        width:230px;
+        margin: 0 auto;
+
+        h2.field-name-title-field {
+          text-transform: uppercase;
+          font-weight: normal;
+          margin: 0 auto;
+        }
+
+        .field-name-commerce-price {
+          color: #009bfd;
+          font-weight: bold;
+        }
+      }
     }
     li.views-row:nth-child(3n+0) {
       margin-right: 0;
@@ -575,9 +600,28 @@ h1, h2, h3, h4, h5, h6 {
 
 .zone-header {
   width: 100% !important;
+  position: relative;
+
   .region-header-first {
-    width: 100% !important;
     margin: 0;
+    position: absolute;
+    background: rgba(255,255,255,0.83);
+    width: auto !important;
+    height: 100%;
+    padding: 0 30px 0 70px;
+    border-right: #009bfd 5px solid;
+
+    h2.block-title {
+      color: #009bfd;
+      text-transform: lowercase;
+      font-weight: normal;
+    }
+  }
+
+  .region-header-second {
+    width: 100% !important;
+    z-index: -9999;
+    margin: 0 auto;
   }
 }
 
