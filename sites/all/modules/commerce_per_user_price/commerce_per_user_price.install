@@ -1,0 +1,44 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the commerce_per_user_price module.
+ */
+/**
+ * Implements hook_schema().
+ */
+function commerce_per_user_price_schema() {
+  $schema['product_price_list'] = array(
+    'description' => t('custom table to store per product per user price'),
+    'fields' => array(
+      'id' => array(
+        'description' => t('The primary identifier for this table'),
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'length' => 50,
+      ),
+      'product_id' => array(
+        'description' => t('This stores the sku of product'),
+        'type' => 'varchar',
+        'not null' => TRUE,
+        'length' => 50,
+      ),
+      'user_id' => array(
+        'description' => t('It stores the user id of drupal user'),
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'length' => 50,
+      ),
+      'price' => array(
+        'description' => t('It stores the custom price for user'),
+        'type' => 'float',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'length' => 50,
+      ),
+    ),
+    'primary key' => array('id'),
+  );
+  return $schema;
+}
