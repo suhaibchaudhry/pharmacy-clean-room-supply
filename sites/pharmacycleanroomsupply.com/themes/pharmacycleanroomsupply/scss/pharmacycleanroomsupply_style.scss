@@ -454,7 +454,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
-.front, .page-products, .node-type-product-display, .page-cart, .page-checkout {
+.front, .node-type-product-display, .page-cart, .page-checkout {
   .zone-preface-wrapper {
     display: none;
   }
@@ -480,6 +480,10 @@ h1, h2, h3, h4, h5, h6 {
     ul li a{
       color: #000;
       font-weight: normal;
+    }
+
+    .item-list .item-list {
+      margin-left: 20px;
     }
   }
 }
