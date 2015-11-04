@@ -946,6 +946,31 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .field-name-field-product {
+    .form-item-quantity {
+      span.ui-widget {
+        display: none;
+      }
+      label {
+        float: left !important;
+        width: 24% !important;
+        padding: 5px 10px;
+        background: #000;
+        color: #fff;
+        font-size: 13px;
+        margin-right: 0 !important;
+
+        &::after {
+          display: none;
+        }
+      }
+      input {
+        width: 15px !important;
+        text-align: center !important;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 6px 10px;
+      }
+    }
     form.commerce-add-to-cart {
       background: none;
 
