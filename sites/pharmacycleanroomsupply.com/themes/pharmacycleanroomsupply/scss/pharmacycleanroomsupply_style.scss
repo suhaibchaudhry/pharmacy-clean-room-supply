@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,600,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300);
 
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
@@ -490,6 +490,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-products {
   .view-display-products {
+    .item-list {
+      .last {
+        clear: inherit;
+        float: inherit;
+      }
+    }
     li.views-row {
       width: 244px;
       border: 1px solid #eaeaea;
@@ -499,6 +505,16 @@ h1, h2, h3, h4, h5, h6 {
       article {
         width:230px;
         margin: 0 auto;
+        position: relative;
+        height: 460px;
+
+        header {
+          background: none;
+        }
+
+        .field-field-images {
+          margin-bottom: 0;
+        }
 
         h2.field-name-title-field {
           text-transform: uppercase;
@@ -509,6 +525,40 @@ h1, h2, h3, h4, h5, h6 {
         .field-name-commerce-price {
           color: #009bfd;
           font-weight: bold;
+          margin-bottom: 0;
+        }
+
+        .field-name-field-product {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+
+          form.commerce-add-to-cart {
+            padding-top: 0;
+            background: none;
+
+            select.form-select {
+              width: 100%;
+            }
+
+            .attribute-widgets {
+              label {
+                display: none;
+              }
+            }
+
+            input.form-submit {
+              background: #000;
+              width: 100%;
+              border-radius: 0;
+              text-align: center;
+              padding: 5px 0;
+              text-transform: lowercase;
+              margin: 0;
+            }
+          }
         }
       }
     }
@@ -645,6 +695,29 @@ h1, h2, h3, h4, h5, h6 {
 
 .zone-user-wrapper {
   background: #f3f3f3;
+  .top-address-icon {
+    background-image: url("../images/address-icon.png");
+    text-indent: -9999px;
+    height: 44px;
+    width: 30px;
+    background-repeat: no-repeat;
+    float: left;
+    margin: 3px 0 0 0;
+  }
+  .top-phone-wrapper {
+    background: #2d2d2d;
+    color: #fff;
+    float: left;
+    .top-phone-icon {
+      background-image: url("../images/phone-icon.png");
+      text-indent: -9999px;
+      height: 31px;
+      width: 26px;
+      background-repeat: no-repeat;
+      float: left;
+      margin: 3px 0 0 10px;
+    }
+  }
 }
 
 
@@ -654,6 +727,7 @@ h1, h2, h3, h4, h5, h6 {
       .top-address, .top-phone {
         float:left;
         margin: 8px 10px 0 0;
+        font-size: 12px;
       }
     }
 }
@@ -799,5 +873,112 @@ h1, h2, h3, h4, h5, h6 {
   .block-block-6 {
     font-size: 21px;
     margin: 0 0 10px 0;
+  }
+}
+
+.block-menu-user-menu {
+  .content {
+    ul.menu {
+      li.first {
+      border-right: 1px solid #2d2d2d;
+      }
+      li {
+        a {
+          color: #2d2d2d;
+        }
+      }
+    }
+  }
+}
+
+.block-shopping-cart-block {
+  .content {
+    background-color: transparent;
+    background-image: url("../images/shopping-cart-icon.png");
+    padding-left: 30px;
+    .view-shopping-cart {
+      .line-item-summary {
+      margin: 0 0 0 7px;
+      background: #2d2d2d;
+      padding: 0 0 0 10px;
+        ul.links {
+          background-color: #000000;
+        }
+        .line-item-total-raw {
+          color: #fff;
+        }
+        .line-item-quantity {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+#block-views-exp-display-products-page {
+  .views-submit-button {
+    right: -36px;
+    top: 2px;
+    .form-submit {
+      text-indent: 0;
+      background-image: none;
+      background-color: #2d2d2d;
+      color: #fff;
+      padding: 13px 29px 13px 32px;
+      font-size: 18px;
+    }
+  }
+}
+
+#block-views-exp-display-products-page {
+  .form-text {
+    padding: 5px 12px 5px 17px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+
+.node-product-display {
+  .field-name-body {
+    span.read-more a {
+      text-align: left;
+    }
+  }
+
+  .field-name-field-product {
+    form.commerce-add-to-cart {
+      background: none;
+
+      input.form-submit {
+        background: #009BFD;
+        border-radius: inherit;
+        padding: 5px 25px;
+        text-transform: lowercase;
+        margin-left: 0;
+      }
+    }
+  }
+
+  h2.field-name-title-field {
+    font-weight: 100;
+    border-bottom: 3px solid #009BFD;
+  }
+
+  .commerce-product-field {
+    .field-name-commerce-price {
+      .field-item {
+        color: #009BFD;
+
+        &::before {
+          content: 'Your Price : ';
+        }
+      }
+    }
+  }
+}
+
+.node-product-display-full {
+   .commerce-product-field-field-images {
+    text-align: center;
   }
 }
