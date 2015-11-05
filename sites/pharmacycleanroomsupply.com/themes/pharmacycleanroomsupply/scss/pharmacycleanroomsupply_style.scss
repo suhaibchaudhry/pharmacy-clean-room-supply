@@ -532,7 +532,7 @@ h1, h2, h3, h4, h5, h6 {
           margin-bottom: 0;
           padding-bottom: 0;
           position: absolute;
-          bottom: 0;
+          bottom: -10px;
           width: 100%;
 
           form.commerce-add-to-cart {
@@ -540,7 +540,7 @@ h1, h2, h3, h4, h5, h6 {
             background: none;
 
             select.form-select {
-              width: 100%;
+              width: 100% !important;
             }
 
             .attribute-widgets {
@@ -973,12 +973,21 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 
+  .field-name-field-manufacturer {
+    .field-label {
+
+    }
+    .field-item a {
+
+    }
+  }
+
   .field-name-field-product {
     background: none;
     .form-item-attributes-product-select {
       label {
         float: left !important;
-        width: 26% !important;
+        width: 13% !important;
         padding: 5px 10px;
         background: #000;
         color: #fff;
@@ -990,7 +999,7 @@ h1, h2, h3, h4, h5, h6 {
         }
       }
       select.form-select {
-        width: 259px !important;
+        width: 308px !important;
         text-align: center !important;
         margin-top: 0;
         margin-bottom: 0;
@@ -1067,10 +1076,6 @@ h1, h2, h3, h4, h5, h6 {
     .field-name-commerce-price {
       .field-item {
         color: #009BFD;
-
-        &::before {
-          content: 'Your Price : ';
-        }
       }
     }
   }
@@ -1079,5 +1084,15 @@ h1, h2, h3, h4, h5, h6 {
 .node-product-display-full {
    .commerce-product-field-field-images {
     text-align: center;
+  }
+
+  .commerce-product-field {
+    .field-name-commerce-price {
+      .field-item {
+        &::before {
+          content: 'Your Price : ';
+        }
+      }
+    }
   }
 }
