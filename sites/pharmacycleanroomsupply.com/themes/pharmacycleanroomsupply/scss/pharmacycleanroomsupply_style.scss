@@ -463,6 +463,7 @@ h1, h2, h3, h4, h5, h6 {
 .zone-preface2-wrapper {
   h1#page-title {
     margin: 10px;
+    color: #fff;
   }
 }
 
@@ -568,6 +569,38 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+#block-block-7 {
+  background: #d9d9d9;
+  padding: 10px 20px;
+
+  .email-info {
+    margin-bottom: 20px;
+    h1.contact-subtitle {
+      color: #f38700;
+      font-size: 25px;
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+    .contact-information {
+      padding: 0 0 0 1px;
+      a {
+        color: #000;
+      }
+    }
+  }
+  .phone-info, .fax-info, .address-info {
+    margin-bottom: 20px;
+    h1.contact-subtitle {
+      color: #f38700;
+      font-size: 25px;
+      font-weight: normal;
+      margin-bottom: 0;
+    }
+    .contact-information {
+      padding: 0 0 0 1px;
+    }
+  }
+}
 
 .zone-menu {
   .block-menu {
@@ -815,24 +848,65 @@ h1, h2, h3, h4, h5, h6 {
   background: #464646;
 }
 
-.block-webform-client-block-18 {
+.block-webform-client-block-18, #block-multiblock-1 {
   padding: 20px 0;
   h2 {
     color: #fff;
   }
+
+  .webform-component--name, .webform-component--phone, .webform-component--e-mail {
+    input {
+      width: 97% !important;
+    }
+  }
+
   .form-item {
     input, textarea {
       background: #959595;
       border: none;
-      padding: 10px;
+      padding: 10px 17px;
     }
     label {
       padding: 7px 10px;
       color: #fff;
+      font-weight: normal !important;
+      text-transform: lowercase;
     }
   }
 }
 
+#block-multiblock-1 {
+  .webform-component--name, .webform-component--phone, .webform-component--e-mail {
+    input {
+      width: 97% !important;
+    }
+  }
+
+  .form-actions {
+    input {
+      background: #c8c8c8;
+      border: none;
+      width: 100%;
+      padding: 15px 0;
+      text-transform: lowercase;
+      font-size: 30px;
+    }
+  }
+
+  .form-item {
+    input, textarea {
+      background: #959595;
+      border: none;
+      padding: 10px 13px !important;
+    }
+    label {
+      padding: 7px 10px;
+      color: #fff;
+      font-weight: normal !important;
+      text-transform: lowercase;
+    }
+  }
+}
 
 .region-postscript-second {
   .block {
@@ -1091,6 +1165,22 @@ h1, h2, h3, h4, h5, h6 {
       .field-item {
         &::before {
           content: 'Your Price : ';
+        }
+      }
+    }
+  }
+}
+
+.page-node-1 {
+  #region-content {
+    #block-system-main {
+      width: 134%;
+      article {
+        margin: 0;
+        .field-name-body {
+          iframe {
+            width: 100% !important;
+          }
         }
       }
     }
