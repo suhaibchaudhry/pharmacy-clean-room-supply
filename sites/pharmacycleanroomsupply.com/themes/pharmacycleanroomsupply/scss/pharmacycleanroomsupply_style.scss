@@ -570,7 +570,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #block-block-7 {
-  background: #d9d9d9;
+  background: #353535;
   padding: 10px 20px;
   .socialmedia-information {
     .facebook {
@@ -609,28 +609,31 @@ h1, h2, h3, h4, h5, h6 {
   .email-info {
     margin-bottom: 20px;
     h1.contact-subtitle {
-      color: #f38700;
-      font-size: 25px;
-      font-weight: normal;
+      color: #009BFD;
+      font-size: 18px;
+      font-weight: bold;
       margin-bottom: 0;
     }
     .contact-information {
       padding: 0 0 0 1px;
       a {
-        color: #000;
+        color: #fff;
+        font-size: 13px;
       }
     }
   }
   .phone-info, .fax-info, .address-info, .socialmedia-info {
     margin-bottom: 20px;
     h1.contact-subtitle {
-      color: #f38700;
-      font-size: 25px;
-      font-weight: normal;
+      color: #009BFD;
+      font-size: 18px;
+      font-weight: bold;
       margin-bottom: 0;
     }
     .contact-information {
       padding: 0 0 0 1px;
+      color: #fff;
+      font-size: 13px;
     }
   }
 }
@@ -760,6 +763,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .zone-user-wrapper {
+  z-index: 200 !important;
   background: #f3f3f3;
   .top-address-icon {
     background-image: url("../images/address-icon.png");
@@ -857,6 +861,9 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
   }
   .views-row {
+    color: #fff;
+    font-weight: bold;
+    text-transform: lowercase;
     float: left;
     margin: 0 10px 0 0;
     position: relative;
@@ -867,6 +874,9 @@ h1, h2, h3, h4, h5, h6 {
       left: 0;
       right: 0;
       padding: 10px;
+      span::after {
+        content: " +";
+      }
       a:link, a:visited {
         color: #fff;
       }
@@ -882,7 +892,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .block-webform-client-block-18, #block-multiblock-1 {
-  padding: 20px 0;
   h2 {
     color: #fff;
   }
@@ -953,6 +962,7 @@ h1, h2, h3, h4, h5, h6 {
       padding: 10px;
       background: rgba(0,0,0,0.5);
       color: #fff;
+      text-transform: lowercase;
 
       &::after {
         content: " +";
@@ -1193,7 +1203,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .node-product-display-full {
    .commerce-product-field-field-images {
-    text-align: center;
+    #wrap {
+      z-index: inherit !important;
+      border: 1px solid #000;
+    }
   }
 
   .commerce-product-field {
