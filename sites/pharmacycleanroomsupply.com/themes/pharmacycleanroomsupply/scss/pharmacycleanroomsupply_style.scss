@@ -500,7 +500,6 @@ h1, h2, h3, h4, h5, h6 {
     li.views-row {
       width: 244px;
       border: 1px solid #eaeaea;
-      margin: 0 10px 10px 0;
       padding: 20px;
 
       article {
@@ -562,9 +561,6 @@ h1, h2, h3, h4, h5, h6 {
           }
         }
       }
-    }
-    li.views-row:nth-child(3n+0) {
-      margin-right: 0;
     }
   }
 }
@@ -969,22 +965,55 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
-  .block-block-3 {
-    margin-right: 7px;
-    .front-sign-up {
-      background-image: url("../images/sign-up.png");
-      width: 530px;
-      height: 350px;
-      text-indent: -9999px;
+}
 
+@media (max-width: 1220px) {
+  .region-postscript-second {
+    .block-block-3 {
+      width: 100% !important;
+      margin-right: 7px;
+      .front-sign-up {
+        background-image: url("../images/sign-up.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 350px;
+        text-indent: -9999px;
+      }
+    }
+    .block-block-4 {
+      width: 100% !important;
+      .learn-about-fs {
+        background-image: url("../images/about-image.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 350px;
+        text-indent: -9999px;
+      }
     }
   }
-  .block-block-4 {
-    .learn-about-fs {
-      background-image: url("../images/about-image.png");
-      width: 643px;
-      height: 350px;
-      text-indent: -9999px;
+}
+
+@media (min-width: 1220px) {
+  .region-postscript-second {
+    .block-block-3 {
+      width: inherit !important;
+      margin-right: 7px;
+      .front-sign-up {
+        background-image: url("../images/sign-up.png");
+        width: 530px;
+        height: 350px;
+        text-indent: -9999px;
+
+      }
+    }
+    .block-block-4 {
+      width: inherit !important;
+      .learn-about-fs {
+        background-image: url("../images/about-image.png");
+        width: 643px;
+        height: 350px;
+        text-indent: -9999px;
+      }
     }
   }
 }
@@ -1233,4 +1262,38 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
   }
+}
+@media (max-width: 1220px) {
+  #zone-postscript {
+    .region-postscript-first-inner {
+      .view-product-category-blocks {
+        .views-row {
+          .field-item img {
+            width: 148px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 980px) {
+  #zone-postscript {
+    .region-postscript-first-inner {
+      .view-product-category-blocks {
+        .views-row {
+          .field-item img {
+            width: 108px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.block-shopping-cart-block {
+  display: none;
+}
+
+.checkout {
+  display: none;
 }
