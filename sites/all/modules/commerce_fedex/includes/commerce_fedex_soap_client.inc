@@ -141,7 +141,7 @@ function commerce_fedex_submit_soap_request($request, $method = 'getRates') {
         watchdog('fedex', 'FedEx API @severity (@code)' . PHP_EOL . '<br/><b>Source:</b> @source<br/><b>Message:</b> @message<br/><b>Localized Message:</b> @localized_message',
           array('@severity' => $notification->Severity, '@code' => $notification->Code,
             '@source' => $notification->Source, '@message' => $notification->Message,
-            '@localized_message' => $notification->LocalizedMessage), $watchdog_severity );
+            '@localized_message' => ( isset($notification->LocalizedMessage) ? $notification->LocalizedMessage : '' ) ), $watchdog_severity );
       }
     }
   } catch (SoapFault $exception) {
