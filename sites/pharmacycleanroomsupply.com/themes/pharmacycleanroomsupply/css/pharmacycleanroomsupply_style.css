@@ -939,8 +939,3 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 980px) {
   #zone-postscript .region-postscript-first-inner .view-product-category-blocks .views-row .field-item img {
     width: 108px; } }
-.block-shopping-cart-block {
-  display: none; }
-
-.checkout {
-  display: none; }
