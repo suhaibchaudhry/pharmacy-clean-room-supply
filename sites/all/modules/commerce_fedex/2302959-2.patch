@@ -1,0 +1,13 @@
+diff --git a/includes/commerce_fedex_soap_client.inc b/includes/commerce_fedex_soap_client.inc
+index d14ab88..63e8650 100644
+--- a/includes/commerce_fedex_soap_client.inc
++++ b/includes/commerce_fedex_soap_client.inc
+@@ -139,7 +139,7 @@ function commerce_fedex_submit_soap_request($request, $method = 'getRates') {
+         watchdog('fedex', 'FedEx API @severity (@code)' . PHP_EOL . '<br/><b>Source:</b> @source<br/><b>Message:</b> @message<br/><b>Localized Message:</b> @localized_message',
+           array('@severity' => $notification->Severity, '@code' => $notification->Code,
+             '@source' => $notification->Source, '@message' => $notification->Message,
+-            '@localized_message' => $notification->LocalizedMessage), $watchdog_severity );
++            '@localized_message' => ( isset($notification->LocalizedMessage) ? $notification->LocalizedMessage : '' ) ), $watchdog_severity );
+       }
+     }
+   } catch (SoapFault $exception) {
