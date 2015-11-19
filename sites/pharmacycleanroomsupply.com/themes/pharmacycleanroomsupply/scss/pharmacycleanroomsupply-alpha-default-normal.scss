@@ -79,3 +79,24 @@ div.messages.commerce-add-to-cart-confirmation .message-inner {
     }
   }
 }
+
+.section-footer {
+  .block-menu-footer-navigation {
+    li.expanded {
+      text-align: initial;
+      width: 25%;
+      span {
+        font-size: initial;
+      }
+      ul.menu {
+        text-align: initial;
+      }
+    }
+  }
+}
+
+#region-branding {
+  .logo-img {
+    width: 50%;
+  }
+}

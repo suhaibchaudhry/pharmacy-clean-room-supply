@@ -634,6 +634,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.logged-in {
+  .zone-menu {
+    .block-menu {
+      li.last {
+        display: none;
+      }
+    }
+  }
+}
+
 .zone-menu {
   .block-menu {
     margin: 0 0 15px 0;
@@ -793,7 +803,7 @@ h1, h2, h3, h4, h5, h6 {
       .top-address, .top-phone {
         float:left;
         margin: 8px 10px 0 0;
-        font-size: 12px;
+        font-size: 10px;
       }
     }
 }
@@ -802,11 +812,17 @@ h1, h2, h3, h4, h5, h6 {
   margin: 30px 0 0 0;
   .block-menu-footer-navigation {
     li.expanded {
+      text-align: center;
       width: 25%;
       padding: 0;
+      width: 100%;
+      ul.menu {
+        text-align: center;
+      }
       span {
         background: #009bfd;
         padding: 10px;
+        font-size: 20px;
       }
     }
   }
@@ -856,6 +872,12 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 0 10px 0;
     color: #fff;
   }
+  .views-row-odd {
+    float: left;
+  }
+  .views-row-even {
+    float: right;
+  }
   .views-row {
     color: #fff;
     font-weight: bold;
@@ -863,6 +885,7 @@ h1, h2, h3, h4, h5, h6 {
     float: left;
     margin: 0 10px 0 0;
     position: relative;
+    width: 49% !important;
     .views-field-name {
       background: rgba(0, 0, 0, 0.5);
       position: absolute;
@@ -1296,5 +1319,11 @@ h1, h2, h3, h4, h5, h6 {
         }
       }
     }
+  }
+}
+
+#region-branding {
+  .logo-img {
+    width: 100%;
   }
 }
