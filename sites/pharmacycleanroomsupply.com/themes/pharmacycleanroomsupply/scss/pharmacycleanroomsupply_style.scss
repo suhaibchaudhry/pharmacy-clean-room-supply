@@ -489,6 +489,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+
 .page-products {
   .view-display-products {
     .item-list {
@@ -498,9 +500,10 @@ h1, h2, h3, h4, h5, h6 {
       }
     }
     li.views-row {
-      width: 244px;
+      width: 100%;
       border: 1px solid #eaeaea;
-      padding: 20px;
+      padding-right: 0;
+      margin-bottom: 20px;
 
       article {
         width:230px;
@@ -639,6 +642,42 @@ h1, h2, h3, h4, h5, h6 {
     .block-menu {
       li.last {
         display: none;
+      }
+    }
+  }
+}
+
+#block-menu-menu-main-navigation {
+  display: none;
+}
+
+#block-tb-megamenu-menu-main-navigation {
+  display: block;
+  button {
+    background-image: url("../images/menu-button.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    i::before {
+      display: none;
+    }
+  }
+  .tb-megamenu-nav {
+    li{
+      a {
+        border: none;
+        text-align: center;
+      }
+      a:hover {
+        color: #009bfd;
+      }
+      &.active {
+        a {
+          background-color: #009bfd;
+          &:hover {
+            color: #fff;
+          }
+        }
       }
     }
   }
@@ -913,6 +952,8 @@ h1, h2, h3, h4, h5, h6 {
 .block-webform-client-block-18, #block-multiblock-1 {
   h2 {
     color: #fff;
+    padding-top: 10px;
+    font-size: 30px;
   }
 
   .webform-component--name, .webform-component--phone, .webform-component--e-mail {
@@ -982,6 +1023,7 @@ h1, h2, h3, h4, h5, h6 {
       background: rgba(0,0,0,0.5);
       color: #fff;
       text-transform: lowercase;
+      font-size: 17px;
 
       &::after {
         content: " +";
@@ -1097,16 +1139,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #block-views-exp-display-products-page {
-  .views-submit-button {
-    right: -36px;
-    top: 2px;
-    .form-submit {
-      text-indent: 0;
-      background-image: none;
-      background-color: #2d2d2d;
-      color: #fff;
-      padding: 13px 29px 13px 32px;
-      font-size: 18px;
+  .views-exposed-widgets {
+    float: initial;
+    margin-right: initial;
+    width: initial;
+    .views-submit-button {
+      right: 0;
+      top: 2px;
+      .form-submit {
+        text-indent: 0;
+        background-image: none;
+        background-color: #2d2d2d;
+        color: #fff;
+        padding: 13px 29px 13px 32px;
+        font-size: 18px;
+      }
     }
   }
 }
@@ -1323,7 +1370,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #region-branding {
-  .logo-img {
-    width: 100%;
+  .branding-data {
+    padding: 0 10px;
+    .logo-img {
+      width: 100%;
+    }
   }
+}
+
+#block-menu-menu-user-menu {
+  float: right;
 }

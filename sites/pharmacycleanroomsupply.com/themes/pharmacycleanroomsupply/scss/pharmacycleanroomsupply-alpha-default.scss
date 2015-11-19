@@ -156,7 +156,41 @@ body {
 }
 
 #region-branding {
-  .logo-img {
-    width: 50%;
+  .branding-data {
+    .logo-img {
+      width: 50%;
+    }
+  }
+}
+
+#block-menu-menu-main-navigation {
+  display: block;
+}
+
+#block-tb-megamenu-menu-main-navigation {
+  display: none;
+}
+
+#block-menu-menu-user-menu {
+  float: initial;
+}
+
+#block-views-exp-display-products-page {
+  .views-exposed-widgets {
+    float: right;
+    margin-right: 10px;
+    .views-submit-button {
+      right: -36px;
+    }
+  }
+}
+
+.page-products {
+  .view-display-products {
+    li.views-row {
+      width: 244px;
+      padding: 20px;
+      padding-right: initial;
+    }
   }
 }
