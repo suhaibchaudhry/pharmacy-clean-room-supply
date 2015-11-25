@@ -11,23 +11,21 @@ projects[entityreference][version] = 1.1
 projects[entityreference][patch][] = "http://drupal.org/files/1580348-universal-formatters-17.patch"
 projects[rules][version] = 2.9
 projects[views][version] = 3.11
-projects[views][patch][] = "http://drupal.org/files/2059555-reduce-formatter-form-state.patch"
 projects[views_bulk_operations][version] = 3.3
 projects[addressfield][version] = 1.1
-projects[features][version] = "2.6"
+projects[features][version] = "2.7"
 projects[features][patch][2143765] = "http://drupal.org/files/issues/features-fix-modules-enabled-2143765-1.patch"
 projects[features][patch][2479803] = "https://www.drupal.org/files/issues/ignore_hidden_modules-2479803-1.patch"
-projects[features][patch][2534138] = "https://www.drupal.org/files/issues/2534138-field-base-exception-catch-1.patch"
-projects[features_override][version] = 2.0-rc2
+projects[features_override][version] = 2.0-rc3
 projects[strongarm][version] = 2.0
 projects[taxonomy_menu][version] = 1.5
 projects[libraries][version] = 2.2
-projects[views_megarow][version] = 1.4
+projects[views_megarow][version] = 1.5
 
 ; Drupal Commerce and Commerce contribs.
 projects[commerce][version] = 1.11
 projects[commerce_features][version] = 1.1
-projects[commerce_addressbook][version] = 2.0-rc8
+projects[commerce_addressbook][version] = 2.0-rc9
 projects[commerce_shipping][version] = 2.2
 projects[commerce_flat_rate][version] = 1.0-beta2
 projects[commerce_fancy_attributes][version] = 1.0
@@ -37,10 +35,7 @@ projects[commerce_autosku][download][revision] = 32e86f4
 projects[commerce_autosku][download][branch] = 7.x-1.x
 projects[commerce_migrate][version] = 1.1
 projects[commerce_migrate][patch][1931302] = https://www.drupal.org/files/commerce_products_source_migration-1931302-2.patch
-projects[commerce_discount][version] = 1.x-dev
-projects[commerce_discount][download][type] = git
-projects[commerce_discount][download][revision] = 7a78225
-projects[commerce_discount][download][branch] = 7.x-1.x
+projects[commerce_discount][version] = 1.0-alpha6
 projects[commerce_checkout_progress][version] = 1.3
 projects[commerce_extra_price_formatters][version] = 1.x-dev
 projects[commerce_extra_price_formatters][download][type] = git
@@ -52,9 +47,10 @@ projects[commerce_payleap][version] = 1.1
 projects[commerce_moneybookers][version] = 1.2
 projects[commerce_moneybookers][patch][] = "http://drupal.org/files/commerce_moneybookers-disable_payment_method_by_default-1962226-3.patch"
 projects[commerce_paypal][version] = 2.3
-projects[commerce_backoffice][version] = 1.4
+projects[commerce_paypal][patch][2458721] = "https://www.drupal.org/files/issues/commerce_paypal-addressfield-default-values-2458721-1.patch"
+projects[commerce_backoffice][version] = 1.5
 projects[commerce_message][version] = 1.0-rc3
-projects[commerce_search_api][version] = 1.3
+projects[commerce_search_api][version] = 1.4
 projects[commerce_add_to_cart_confirmation][version] = 1.0-rc2
 projects[commerce_kiala][version] = 1.0-rc1
 projects[commerce_physical][version] = 1.x-dev
@@ -68,9 +64,7 @@ projects[commerce_exactor][version] = 1.3
 projects[commerce_paymill][version] = 2.4
 projects[commerce_nosto_tagging][version] = 1.0
 projects[commerce_nosto_tagging][patch][] = https://drupal.org/files/issues/issue-2225883.patch
-projects[commerce_yotpo][download][type] = "git"
-projects[commerce_yotpo][download][revision] = "ecc41f9"
-projects[commerce_yotpo][download][branch] = 7.x-1.x
+projects[commerce_yotpo][version] = 1.2
 projects[commerce_firstdata_gge4][version] = 1.0
 
 ; Other contribs.
@@ -78,7 +72,7 @@ projects[countries][version] = 2.3
 projects[remote_stream_wrapper][version] = 1.0-rc1
 projects[colorbox][version] = 2.7
 projects[colorbox][patch][] = https://www.drupal.org/files/issues/plugin_version_detection-2360375-9.patch
-projects[physical][version] = 1.x-dev
+projects[physical][version] = 1.x
 projects[physical][download][type] = git
 projects[physical][download][revision] = 32e1a38
 projects[physical][download][branch] = 7.x-1.x
@@ -97,7 +91,8 @@ projects[service_links][download][revision] = "6f63b84"
 projects[service_links]download][branch] = 7.x-2.x
 projects[advanced_help][version] = 1.3
 projects[mailsystem][version] = 2.34
-projects[mimemail][version] = 1.0-beta3
+projects[mailsystem][patch][1534706] = "https://www.drupal.org/files/mailsystem.1534706.6.patch"
+projects[mimemail][version] = 1.0-beta4
 projects[token][version] = 1.6
 projects[token][patch][] = "http://drupal.org/files/token-token_asort_tokens-1712336_0.patch"
 projects[eva][version] = 1.2
@@ -106,7 +101,7 @@ projects[message_notify][version] = 2.5
 projects[migrate][version] = 2.8
 projects[migrate_extras][version] = 2.5
 projects[migrate_extras][patch][] = "http://drupal.org/files/migrate_extras-fix-destid2-array-1951904-4.patch"
-projects[date][version] = 2.8
+projects[date][version] = 2.9
 projects[yottaa][version] = 1.2
 projects[menu_attributes][version] = 1.0-rc3
 projects[fences][version] = "1.0"
@@ -116,11 +111,11 @@ projects[title][version] = "1.0-alpha7"
 projects[title][patch][] = "http://drupal.org/files/title-translation_overwrite-1269076-35.patch"
 projects[kameleoon][version] = "1.1"
 projects[mailup][version] = "1.1"
-projects[mailjet][version] = "2.3"
+projects[mailjet][version] = "2.5"
 
 ; Search related modules.
-projects[search_api][version] = 1.15
-projects[search_api_db][version] = 1.4
+projects[search_api][version] = 1.16
+projects[search_api_db][version] = 1.5
 projects[search_api_ranges][version] = 1.5
 projects[search_api_ranges][patch][] = "https://drupal.org/files/issues/search_api_ranges-rewrite-data-alteration-callback-2001846-4.patch"
 projects[facetapi][version] = 1.5
@@ -147,14 +142,17 @@ projects[distro_update][version] = 1.0-beta4
 
 ; Internationalization
 projects[variable][version] = 2.5
-projects[i18n][version] = "1.12"
+projects[i18n][version] = "1.13"
 projects[lingotek][version] = 6.02
 
 ; Base theme.
 projects[omega][version] = 3.1
 projects[omega][patch][] = "http://drupal.org/files/relative-src-15.patch"
+projects[omega][type] = theme
 projects[omega_kickstart][version] = 3.4
+projects[omega_kickstart][type] = theme
 projects[shiny][version] = 1.6
+projects[shiny][type] = theme
 
 ; Libraries.
 libraries[colorbox][type] = "libraries"
