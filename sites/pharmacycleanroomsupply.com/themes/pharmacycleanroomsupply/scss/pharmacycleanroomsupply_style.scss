@@ -454,6 +454,21 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
+.block-block-8 {
+  float: left;
+  font-weight: bold;
+  margin: -5px 11px 0 11px;
+  font-size: 18px;
+  background: #009BFD;
+  padding: 10px 10px 0 10px;
+  border-radius: 2px 2px 0 0;
+    a {
+      color: #fff;
+    }
+}
+
+
+
 .front, .node-type-product-display, .page-cart, .page-checkout {
   .zone-preface-wrapper {
     display: none;
@@ -530,6 +545,19 @@ h1, h2, h3, h4, h5, h6 {
           font-weight: bold;
           margin-bottom: 0;
         }
+
+	.field-name-field-special-pricing {
+		.field-label {
+			display: none !important;
+		}
+		.field-items a {
+			color: #fff;
+			background-color: #009bfd;
+			padding: 10px 25px;
+			text-transform: lowercase;
+			font-size: 20px;
+		}
+	}
 
         .field-name-field-product {
           margin-bottom: 0;
@@ -790,7 +818,6 @@ h1, h2, h3, h4, h5, h6 {
 
     h2.block-title {
       color: #009bfd;
-      text-transform: lowercase;
       font-weight: normal;
       border-bottom: 4px solid #ABABAB;
       padding-top: 25px;
@@ -921,7 +948,6 @@ h1, h2, h3, h4, h5, h6 {
   .views-row {
     color: #fff;
     font-weight: bold;
-    text-transform: lowercase;
     float: left;
     margin: 0 10px 0 0;
     position: relative;
@@ -1381,4 +1407,16 @@ h1, h2, h3, h4, h5, h6 {
 
 #block-menu-menu-user-menu {
   float: right;
+}
+
+.page-checkout {
+	#commerce-checkout-form-checkout {
+		#customer-profile-shipping-ajax-wrapper {
+			#customer-profile-shipping-field-po-number-add-more-wrapper {
+				label {
+					width: 8%;
+				}
+			}
+		}
+	}
 }
