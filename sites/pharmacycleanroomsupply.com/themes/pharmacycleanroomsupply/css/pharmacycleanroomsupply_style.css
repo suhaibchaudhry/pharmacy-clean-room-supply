@@ -1010,3 +1010,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-checkout #commerce-checkout-form-checkout #customer-profile-shipping-ajax-wrapper #customer-profile-shipping-field-po-number-add-more-wrapper label {
   width: 8%; }
+
+.page-user-register #user-register-form fieldset#edit-profile-main {
+  padding-left: 30px;
+  padding-top: 45px; }
+  .page-user-register #user-register-form fieldset#edit-profile-main legend {
+    display: none; }
