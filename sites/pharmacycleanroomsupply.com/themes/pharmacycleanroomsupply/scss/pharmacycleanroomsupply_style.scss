@@ -1193,10 +1193,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.not-logged-in #block-views-product-tabs-content-block {
-	display: none;
-}
-
 #block-views-product-tabs-content-block {
   margin-top: 25px;
   .quicktabs-wrapper {
@@ -1231,6 +1227,18 @@ h1, h2, h3, h4, h5, h6 {
       text-align: left;
     }
   }
+ 
+	.commerce-product-extra-field-sku {
+		.commerce-product-sku {
+			font-size: 20px;
+			margin-bottom: 20px;
+			color: #000;
+			
+			.commerce-product-sku-label {
+				font-weight: 700;
+			}
+		}
+	}
 
   .field-name-field-manufacturer {
     .field-label {
@@ -1434,6 +1442,17 @@ h1, h2, h3, h4, h5, h6 {
 			legend {
 				display: none;
 			}
+		}
+	}
+}
+
+.not-logged-in {
+	#block-views-product-tabs-content-block {
+        	display: none;
+	}
+	.node-product-display {
+		.commerce-product-sku {
+			display: none;
 		}
 	}
 }
