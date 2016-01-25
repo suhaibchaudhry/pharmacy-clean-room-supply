@@ -1193,6 +1193,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.not-logged-in #block-views-product-tabs-content-block {
+	display: none;
+}
+
 #block-views-product-tabs-content-block {
   margin-top: 25px;
   .quicktabs-wrapper {
