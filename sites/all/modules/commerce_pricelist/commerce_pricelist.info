@@ -12,18 +12,20 @@ files[] = commerce_pricelist.rules.inc
 
 ; Tests
 files[] = tests/commerce_pricelist.test
+files[] = tests/commerce_pricelist_tax.test
 
 dependencies[] = commerce
 dependencies[] = commerce_line_item
+dependencies[] = commerce_checkout
+dependencies[] = commerce_product_reference
 dependencies[] = commerce_price
 dependencies[] = commerce_product
-dependencies[] = commerce_product_pricing
 dependencies[] = entity
 dependencies[] = rules
 
-; Information added by Drupal.org packaging script on 2015-06-11
-version = "7.x-1.0-beta3"
+; Information added by Drupal.org packaging script on 2016-04-03
+version = "7.x-1.1"
 core = "7.x"
 project = "commerce_pricelist"
-datestamp = "1434045621"
+datestamp = "1459678441"
 
