@@ -1,0 +1,11 @@
+name = Pharmacy Clean Room Supply Email
+description = Defines Emails - Plain Text or HTML and Multi-language
+package = Commerce (contrib)
+core = 7.x
+
+; Information added by drupal.org packaging script on 2013-09-30
+version = "1.x"
+core = "7.x"
+project = "pharmacycleanroomsupply_email"
+datestamp = "1380560169"
+

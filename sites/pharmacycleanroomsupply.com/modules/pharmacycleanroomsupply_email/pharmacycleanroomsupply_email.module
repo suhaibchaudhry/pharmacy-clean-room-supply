@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Provides Kickstart-specific cart and order customizations.
+ */
+
+/**
+ * Implements hook_default_message_type_alter().
+ */
+function pharmacycleanroomsupply_email_default_message_type_alter(&$items) {
+  if (isset($items['commerce_order_order_confirmation'])) {
+    dpm($items);
+  }
+}
+
