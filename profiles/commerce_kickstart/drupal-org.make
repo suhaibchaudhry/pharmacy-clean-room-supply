@@ -6,11 +6,12 @@ defaults[projects][subdir] = contrib
 
 ; Basic contributed modules.
 projects[ctools][version] = 1.9
+projects[ctools][patch][2528736] = "https://www.drupal.org/files/issues/deprecating_php4_style-2528736-23.patch"
 projects[entity][version] = 1.7
 projects[entityreference][version] = 1.1
 projects[entityreference][patch][] = "http://drupal.org/files/1580348-universal-formatters-17.patch"
 projects[rules][version] = 2.9
-projects[views][version] = 3.13
+projects[views][version] = 3.14
 projects[views_bulk_operations][version] = 3.3
 projects[addressfield][version] = 1.2
 projects[features][version] = 2.10
@@ -19,12 +20,12 @@ projects[features][patch][2479803] = "https://www.drupal.org/files/issues/ignore
 projects[features_override][version] = 2.0-rc3
 projects[strongarm][version] = 2.0
 projects[taxonomy_menu][version] = 1.5
-projects[libraries][version] = 2.2
-projects[views_megarow][version] = 1.5
+projects[libraries][version] = 2.3
+projects[views_megarow][version] = 1.6
 
 ; Drupal Commerce and Commerce contribs.
 projects[commerce][version] = 1.13
-projects[commerce_features][version] = 1.1
+projects[commerce_features][version] = 1.2
 projects[commerce_addressbook][version] = 2.0-rc9
 projects[commerce_shipping][version] = 2.2
 projects[commerce_flat_rate][version] = 1.0-beta2
@@ -35,7 +36,7 @@ projects[commerce_autosku][download][revision] = 32e86f4
 projects[commerce_autosku][download][branch] = 7.x-1.x
 projects[commerce_migrate][version] = 1.2
 projects[commerce_migrate][patch][2701333] = https://www.drupal.org/files/issues/reference_fields_should-2701333-3.patch
-projects[commerce_discount][version] = 1.0-alpha7
+projects[commerce_discount][version] = 1.0-alpha8
 projects[commerce_checkout_progress][version] = 1.4
 projects[commerce_extra_price_formatters][version] = 1.x-dev
 projects[commerce_extra_price_formatters][download][type] = git
@@ -59,7 +60,7 @@ projects[commerce_physical][download][revision] = e2a8866
 projects[commerce_physical][download][branch] = 7.x-1.x
 projects[commerce_amex][version] = 1.1
 projects[commerce_cba][version] = 1.0-beta1
-projects[commerce_authnet][version] = 1.1
+projects[commerce_authnet][version] = 1.4
 projects[commerce_exactor][version] = 1.3
 projects[commerce_paymill][version] = 2.4
 projects[commerce_nosto_tagging][version] = 1.1
@@ -69,8 +70,7 @@ projects[commerce_firstdata_gge4][version] = 1.0
 ; Other contribs.
 projects[countries][version] = 2.3
 projects[remote_stream_wrapper][version] = 1.0-rc1
-projects[colorbox][version] = 2.7
-projects[colorbox][patch][] = https://www.drupal.org/files/issues/plugin_version_detection-2360375-9.patch
+projects[colorbox][version] = 2.12
 ; projects[physical][version] = 1.x-dev
 projects[physical][download][type] = git
 projects[physical][download][revision] = 32e1a38
@@ -81,7 +81,7 @@ projects[oauth][version] = 3.2
 projects[oauth][patch][] = "http://drupal.org/files/980340-d7.patch"
 projects[connector][version] = 1.0-beta2
 projects[oauthconnector][version] = 1.0-beta2
-projects[inline_entity_form][version] = 1.6
+projects[inline_entity_form][version] = 1.8
 projects[inline_conditions][version] = 1.0-alpha7
 projects[field_extractor][version] = 1.3
 projects[service_links][version] = 2.x-dev
@@ -95,8 +95,7 @@ projects[mimemail][version] = 1.0-beta4
 projects[token][version] = 1.6
 projects[token][patch][] = "http://drupal.org/files/token-token_asort_tokens-1712336_0.patch"
 projects[eva][version] = 1.2
-projects[message][version] = 1.11
-projects[message][patch][2629474] = https://www.drupal.org/files/issues/message-mysql57_compatibility-2629474-4.patch
+projects[message][version] = 1.12
 projects[message_notify][version] = 2.5
 projects[migrate][version] = 2.8
 projects[migrate_extras][version] = 2.5
@@ -111,7 +110,7 @@ projects[mailup][version] = "1.1"
 projects[mailjet][version] = "2.5"
 
 ; Search related modules.
-projects[search_api][version] = 1.18
+projects[search_api][version] = 1.19
 projects[search_api_db][version] = 1.5
 projects[search_api_ranges][version] = 1.5
 projects[search_api_ranges][patch][] = "https://drupal.org/files/issues/search_api_ranges-rewrite-data-alteration-callback-2001846-4.patch"
@@ -134,7 +133,7 @@ projects[chosen][version] = 2.x-dev
 projects[chosen][download][type] = git
 projects[chosen][download][revision] = e7a0d22
 projects[chosen][download][branch] = 7.x-2.x
-projects[admin_views][version] = 1.5
+projects[admin_views][version] = 1.6
 projects[distro_update][version] = 1.0-beta4
 
 ; Internationalization
