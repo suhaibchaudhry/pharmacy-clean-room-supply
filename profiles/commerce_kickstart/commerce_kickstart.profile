@@ -1,323 +1,283 @@
 <?php
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function commerce_kickstart_image_default_styles() {
+  $styles = array();
+  $styles['frontpage_block'] = array(
+    'name' => 'frontpage_block',
+    'effects' => array(
+      1 => array(
+        'label' => 'Scale and crop',
+        'help' => 'Scale and crop will maintain the aspect-ratio of the original image, then crop the larger dimension. This is most useful for creating perfectly square thumbnails without stretching the image.',
+        'effect callback' => 'image_scale_and_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_resize_form',
+        'summary theme' => 'image_resize_summary',
+        'module' => 'image',
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => '270',
+          'height' => '305',
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_form_alter().
  *
  * Allows the profile to alter the site configuration form.
  */
 function commerce_kickstart_form_install_configure_form_alter(&$form, $form_state) {
-  // Set a default name for the dev site.
-  $form['site_information']['site_name']['#default_value'] = t('Commerce Kickstart');
+  // When using Drush, let it set the default password.
+  if (drupal_is_cli()) {
+    return;
+  }
+  // Set a default name for the dev site and change title's label.
+  $form['site_information']['site_name']['#title'] = 'Store name';
+  $form['site_information']['site_mail']['#title'] = 'Store email address';
+  $form['site_information']['site_name']['#default_value'] = st('Commerce Kickstart');
 
   // Set a default country so we can benefit from it on Address Fields.
   $form['server_settings']['site_default_country']['#default_value'] = 'US';
+
+  // Use "admin" as the default username.
+  $form['admin_account']['account']['name']['#default_value'] = 'admin';
+
+  // Set the default admin password.
+  $form['admin_account']['account']['pass']['#value'] = 'admin';
+
+  // Hide Update Notifications.
+  $form['update_notifications']['#access'] = FALSE;
+
+  // Add informations about the default username and password.
+  $form['admin_account']['account']['commerce_kickstart_name'] = array(
+    '#type' => 'item',
+    '#title' => st('Username'),
+    '#markup' => 'admin'
+  );
+  $form['admin_account']['account']['commerce_kickstart_password'] = array(
+    '#type' => 'item',
+    '#title' => st('Password'),
+    '#markup' => 'admin'
+  );
+  $form['admin_account']['account']['commerce_kickstart_informations'] = array(
+    '#markup' => '<p>' . t('This information will be emailed to the store email address.') . '</p>'
+  );
+  $form['admin_account']['override_account_informations'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Change my username and password.'),
+  );
+  $form['admin_account']['setup_account'] = array(
+    '#type' => 'container',
+    '#parents' => array('admin_account'),
+    '#states' => array(
+      'invisible' => array(
+        'input[name="override_account_informations"]' => array('checked' => FALSE),
+      ),
+    ),
+  );
+
+  // Make a "copy" of the original name and pass form fields.
+  $form['admin_account']['setup_account']['account']['name'] = $form['admin_account']['account']['name'];
+  $form['admin_account']['setup_account']['account']['pass'] = $form['admin_account']['account']['pass'];
+  $form['admin_account']['setup_account']['account']['pass']['#value'] = array('pass1' => 'admin', 'pass2' => 'admin');
+
+  // Use "admin" as the default username.
+  $form['admin_account']['account']['name']['#access'] = FALSE;
+
+  // Make the password "hidden".
+  $form['admin_account']['account']['pass']['#type'] = 'hidden';
+  $form['admin_account']['account']['mail']['#access'] = FALSE;
+
+  // Add a custom validation that needs to be trigger before the original one,
+  // where we can copy the site's mail as the admin account's mail.
+  array_unshift($form['#validate'], 'commerce_kickstart_custom_setting');
 }
 
 /**
- * Implements hook_install_tasks().
+ * Validate callback; Populate the admin account mail, user and password with
+ * custom values.
  */
-function commerce_kickstart_install_tasks() {
-  $tasks = array();
-
-  // Add a page allowing the user to indicate they'd like to install demo content.
-  $tasks['commerce_kickstart_example_store_form'] = array(
-    'display_name' => st('Example store'),
-    'type' => 'form',
-  );
-
-  return $tasks;
+function commerce_kickstart_custom_setting(&$form, &$form_state) {
+  $form_state['values']['account']['mail'] = $form_state['values']['site_mail'];
+  // Use our custom values only the corresponding checkbox is checked.
+  if ($form_state['values']['override_account_informations'] == TRUE) {
+    if ($form_state['input']['pass']['pass1'] == $form_state['input']['pass']['pass2']) {
+      $form_state['values']['account']['name'] = $form_state['values']['name'];
+      $form_state['values']['account']['pass'] = $form_state['input']['pass']['pass1'];
+    }
+    else {
+      form_set_error('pass', st('The specified passwords do not match.'));
+    }
+  }
 }
 
 /**
- * Task callback: returns the form allowing the user to add example store
- * content on install.
+ * Implements hook_system_info_alter().
+ *
+ * Hides conflicting features (so demo store users don't see the "no demo store"
+ * features, and the other way around).
  */
-function commerce_kickstart_example_store_form() {
-  drupal_set_title(st('Example store content'));
+function commerce_kickstart_system_info_alter(&$info, $file, $type) {
+  // Don't run during installation.
+  if (variable_get('install_task') != 'done') {
+    return;
+  }
 
-  // Prepare all the options for example content.
-  $options = array(
-    'products' => st('Products'),
-    'product_displays' => st('Product display nodes (if <em>Products</em> is selected)'),
-  );
-
-  $form['example_content'] = array(
-    '#type' => 'checkboxes',
-    '#title' => st('Create example content for the following store components:'),
-    '#description' => st('The example content is not comprehensive but illustrates how the basic components work.'),
-    '#options' => $options,
-    '#default_value' => drupal_map_assoc(array_keys($options)),
-  );
-
-  $form['actions'] = array('#type' => 'actions');
-  $form['actions']['submit'] = array(
-    '#type' => 'submit',
-    '#value' => st('Create and continue'),
-    '#weight' => 15,
-  );
-
-  return $form;
-}
-
-/**
- * Submit callback: creates the requested example content.
- */
-function commerce_kickstart_example_store_form_submit(&$form, &$form_state) {
-  $example_content = $form_state['values']['example_content'];
-  $created_products = array();
-  $created_nodes = array();
-
-  // First create products if specified.
-  if (!empty($example_content['products'])) {
-    $product_names = array(
-      '01' => st('Product One'),
-      '02' => st('Product Two'),
-      '03' => st('Product Three')
+  $install_demo_store = variable_get('commerce_kickstart_demo_store', FALSE);
+  if ($install_demo_store) {
+    $hide_modules = array(
+      'commerce_kickstart_lite_product',
     );
+  }
+  else {
+    $hide_modules = array(
+      'commerce_kickstart_product',
+    );
+  }
 
-    foreach ($product_names as $sku => $title) {
-      // Create the new product.
-      $product = commerce_product_new('product');
-      $product->sku = 'PROD-' . $sku;
-      $product->title = $title;
-      $product->language = LANGUAGE_NONE;
-      $product->uid = 1;
+  if ($type == 'module' && in_array($file->name, $hide_modules)) {
+    $info['hidden'] = TRUE;
+  }
+}
 
-      // Set a default price.
-      $product->commerce_price[LANGUAGE_NONE][0]['amount'] = $sku * 1000;
-      $product->commerce_price[LANGUAGE_NONE][0]['currency_code'] = 'USD';
+/**
+ * Provides a list of Crumbs plugins and their weights.
+ */
+function commerce_kickstart_crumbs_get_info() {
+  $crumbs = array(
+    'crumbs.home_title' => 0
+  );
 
-      // Save it and retain a copy.
-      commerce_product_save($product);
-      $created_products[] = $product;
-
-      // Create a node display for the product if specified.
-      if (!empty($example_content['product_displays'])) {
-        // Create the new node.
-        $node = (object) array('type' => 'product_display');
-        node_object_prepare($node);
-        $node->title = $product->title;
-        $node->uid = 1;
-
-        // Reference the product we just made.
-        $node->field_product[LANGUAGE_NONE][]['product_id'] = $product->product_id;
-
-        // Make sure we set the default language
-        $node->language = LANGUAGE_NONE;
-
-        // Save it and retain a copy.
-        node_save($node);
-        $created_nodes[] = $node;
+  foreach (module_implements('commerce_kickstart_crumb_info') as $module) {
+    // The module-provided item might be just the name of the plugin, or it
+    // might be an array in the form of $plugin_name => $weight.
+    foreach (module_invoke($module, 'commerce_kickstart_crumb_info') as $crumb) {
+      if (is_array($crumb)) {
+        $crumbs += $crumb;
+      }
+      else {
+        $crumbs[$crumb] = count($crumbs);
       }
     }
   }
+
+  // Add the fallback wildcard.
+  $crumbs['*'] = count($crumbs);
+
+  asort($crumbs);
+
+  return $crumbs;
 }
 
 /**
- * Creates a Catalog taxonomy vocabulary and adds a term reference field for it
- * to the default product display node type.
+ * Rebuilds a feature using the same logic as features_modules_enabled().
  *
- * @todo This function is currently unused but should be added in as an option
- * for example content creation.
- */
-function _commerce_kickstart_create_example_catalog() {
-  // Create a default Catalog vocabulary for the Product display node type.
-  $description = st('Describes a hierarchy for the product catalog.');
-  $vocabulary = (object) array(
-    'name' => st('Catalog'),
-    'description' => $description,
-    'machine_name' => 'catalog',
-    'help' => '',
-  );
-  taxonomy_vocabulary_save($vocabulary);
-
-  $field = array(
-    'field_name' => 'taxonomy_' . $vocabulary->machine_name,
-    'type' => 'taxonomy_term_reference',
-    'cardinality' => 1,
-    'settings' => array(
-      'allowed_values' => array(
-        array(
-          'vocabulary' => $vocabulary->machine_name,
-          'parent' => 0,
-        ),
-      ),
-    ),
-  );
-  field_create_field($field);
-
-  $instance = array(
-    'field_name' => 'taxonomy_' . $vocabulary->machine_name,
-    'entity_type' => 'node',
-    'label' => st('Catalog category'),
-    'bundle' => 'product_display',
-    'description' => '',
-    'widget' => array(
-      'type' => 'options_select',
-    ),
-  );
-  field_create_instance($instance);
-}
-
-/**
- * Creates an image field on the specified entity bundle.
- */
-function _commerce_kickstart_create_product_image_field($entity_type, $bundle) {
-  // Add a default image field to the specified product type.
-  $instance = array(
-    'field_name' => 'field_image',
-    'entity_type' => $entity_type,
-    'label' => st('Image'),
-    'bundle' => $bundle,
-    'description' => st('Upload an image for this product.'),
-    'required' => FALSE,
-
-    'settings' => array(
-      'file_directory' => 'field/image',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'alt_field' => TRUE,
-      'title_field' => '',
-    ),
-
-    'widget' => array(
-      'type' => 'image_image',
-      'settings' => array(
-        'progress_indicator' => 'throbber',
-        'preview_image_style' => 'thumbnail',
-      ),
-      'weight' => -1,
-    ),
-
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'type' => 'image',
-        'settings' => array('image_style' => 'medium', 'image_link' => 'file'),
-        'weight' => -1,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'type' => 'image',
-        'settings' => array('image_style' => 'medium', 'image_link' => 'file'),
-        'weight' => -1,
-      ),
-      'line_item' => array(
-        'label' => 'hidden',
-        'type' => 'image',
-        'settings' => array('image_style' => 'thumbnail', 'image_link' => ''),
-        'weight' => -1,
-      ),
-      'node_full' => array(
-        'label' => 'hidden',
-        'type' => 'image',
-        'settings' => array('image_style' => 'medium', 'image_link' => 'file'),
-        'weight' => -1,
-      ),
-      'node_teaser' => array(
-        'label' => 'hidden',
-        'type' => 'image',
-        'settings' => array('image_style' => 'thumbnail', 'image_link' => 'content'),
-        'weight' => -1,
-      ),
-      'node_rss' => array(
-        'label' => 'hidden',
-        'type' => 'image',
-        'settings' => array('image_style' => 'medium', 'image_link' => ''),
-        'weight' => -1,
-      ),
-    ),
-  );
-  field_create_instance($instance);
-}
-
-/**
- * Creates a product reference field on the specified entity bundle.
- */
-function _commerce_kickstart_create_product_reference($entity_type, $bundle, $field_name = 'field_product') {
-  // Add a product reference field to the Product display node type.
-  $field = array(
-    'field_name' => $field_name,
-    'type' => 'commerce_product_reference',
-    'cardinality' => FIELD_CARDINALITY_UNLIMITED,
-    'translatable' => FALSE,
-  );
-  field_create_field($field);
-
-  $instance = array(
-    'field_name' => $field_name,
-    'entity_type' => $entity_type,
-    'label' => st('Product'),
-    'bundle' => $bundle,
-    'description' => st('Choose the product(s) to display for sale on this node by SKU. Enter multiple SKUs using a comma separated list.'),
-    'required' => TRUE,
-
-    'widget' => array(
-      'type' => 'commerce_product_reference_autocomplete',
-    ),
-
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'type' => 'commerce_cart_add_to_cart_form',
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'type' => 'commerce_cart_add_to_cart_form',
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'type' => 'commerce_cart_add_to_cart_form',
-      ),
-    ),
-  );
-  field_create_instance($instance);
-}
-
-/**
- * Implements hook_update_projects_alter().
- */
-function commerce_kickstart_update_projects_alter(&$projects) {
-  // Enable update status for the Commerce Kickstart profile.
-  $modules = system_rebuild_module_data();
-  // The module object is shared in the request, so we need to clone it here.
-  $kickstart = clone $modules['commerce_kickstart'];
-  $kickstart->info['hidden'] = FALSE;
-  _update_process_info_list($projects, array('commerce_kickstart' => $kickstart), 'module', TRUE);
-}
-
-/**
- * Implements hook_update_status_alter().
+ * Called from the hook_enable() of every Kickstart feature.
  *
- * Disable reporting of modules that are in the distribution, but only
- * if they have not been updated manually. In addition, we only hide security
- * issues if the distribution itself has not been updated.
+ * features_modules_enabled() runs too late, so when a feature's hook_enable()
+ * or hook_install() runs, the feature hasn't been rebuild yet, no exported
+ * structures exist in the system and can't be modified.
+ * It also rebuilds all features at once, which makes it prone to timeouts.
+ * This is why Kickstart disables features_modules_enabled() and rebuilds
+ * each feature manually in its hook_enable() hook.
  */
-function commerce_kickstart_update_status_alter(&$projects) {
-  $distribution_secure = !in_array($projects['commerce_kickstart']['status'], array(UPDATE_NOT_SECURE, UPDATE_REVOKED, UPDATE_NOT_SUPPORTED));
-  $make_filepath = drupal_get_path('module', 'commerce_kickstart') . '/drupal-org.make';
-  if (!file_exists($make_filepath)) {
-    return;
+function commerce_kickstart_rebuild_feature($module) {
+  $feature = features_load_feature($module, TRUE);
+  $items[$module] = array_keys($feature->info['features']);
+  // Need to include any new files.
+  features_include_defaults(NULL, TRUE);
+  _features_restore('enable', $items);
+  // Rebuild the list of features includes.
+  features_include(TRUE);
+  // Reorders components to match hook order and removes non-existant.
+  $all_components = array_keys(features_get_components());
+  foreach ($items as $module => $components) {
+    $items[$module] = array_intersect($all_components, $components);
   }
-  $make_info = drupal_parse_info_file($make_filepath);
-  foreach ($projects as $project_name => $project_info) {
-    if (!isset($project_info['info']['version']) || !isset($make_info['projects'][$project_name])) {
-      // Don't hide a project that is not shipped with the distribution.
-      continue;
-    }
-    if ($distribution_secure && in_array($project_info['status'], array(UPDATE_NOT_SECURE, UPDATE_REVOKED, UPDATE_NOT_SUPPORTED))) {
-      // Don't hide a project that is in a security state if the distribution
-      // is not in a security state.
-      continue;
-    }
-    $make_project_version = is_array($make_info['projects'][$project_name]) ? $make_info['projects'][$project_name]['version'] : $make_info['projects'][$project_name];
+  _features_restore('rebuild', $items);
+}
 
-    // Current version matches the version we shipped, remove it from the list.
-    if (DRUPAL_CORE_COMPATIBILITY . '-' . $make_project_version == $project_info['info']['version']) {
-      $projects['commerce_kickstart']['includes'][$project_info['name']] = $project_info['info']['name'];
-      unset($projects[$project_name]);
+/**
+ * Implements hook_features_api_alter().
+ *
+ * Commerce Kickstart provides different Features that can be utilized
+ * individually, which means there are conflicting field bases. This allows
+ * the feature structure to exist, including customizations by users.
+ */
+function commerce_kickstart_features_api_alter(&$components) {
+  if (isset($components['field_base'])) {
+    $components['field_base']['duplicates'] = FEATURES_DUPLICATES_ALLOWED;
+  }
+}
+
+/**
+ * Implements hook_field_default_field_bases_alter().
+ *
+ * Helper alter to aid in Features Override of Features 1.x override exports
+ * of Fields and Field Base config.
+ */
+function commerce_kickstart_field_default_field_bases_alter(&$fields) {
+  if (module_exists('features_override')) {
+    $possible_alters = commerce_kickstart_get_fields_default_alters();
+    drupal_alter('field_default_fields_alter', $possible_alters);
+    foreach ($possible_alters as $identifier => $field_default) {
+      // Check if the alter added a field base value.
+      $field_name = $field_default['field_name'];
+      if (!isset($field_default['field_base']) || !isset($fields[$field_name])) {
+        continue;
+      }
+      $fields[$field_name] = drupal_array_merge_deep($fields[$field_name], $field_default['field_base']);
     }
   }
+}
+
+/**
+ * Implements hook_field_default_field_instances_alter().
+ *
+ * Helper alter to aid in Features Override of Features 1.x override exports
+ * of Fields and Field Instance config.
+ */
+function commerce_kickstart_field_default_field_instances_alter(&$fields) {
+  if (module_exists('features_override')) {
+    $possible_alters = commerce_kickstart_get_fields_default_alters();
+    drupal_alter('field_default_fields', $possible_alters);
+    foreach ($possible_alters as $identifier => $field_default) {
+      // Check if the alter added a field instance value.
+      if (!isset($field_default['field_instance']) || !isset($fields[$identifier])) {
+        continue;
+      }
+      $fields[$identifier] = drupal_array_merge_deep($fields[$identifier], $field_default['field_instance']);
+    }
+  }
+}
+
+/**
+ * Gets Features Override alters for field from 1.x
+ */
+function commerce_kickstart_get_fields_default_alters() {
+  $cache = drupal_static(__FUNCTION__, array());
+  if (empty($cache)) {
+    module_load_include('inc', 'features', 'features.export');
+    features_include();
+    // Features 1.x labeled all field data same as field instance in 2.x
+    features_include_defaults('field_instance');
+    $default_hook = features_get_default_hooks('field_instance');
+
+    // Invoke each Feature to see if they provide default field instances,
+    // so that we can have all possible field identifiers.
+    foreach (array_keys(features_get_features()) as $module) {
+      if (module_hook($module, $default_hook)) {
+        $cache = array_merge($cache, call_user_func("{$module}_{$default_hook}"));
+      }
+    }
+  }
+  return $cache;
 }
