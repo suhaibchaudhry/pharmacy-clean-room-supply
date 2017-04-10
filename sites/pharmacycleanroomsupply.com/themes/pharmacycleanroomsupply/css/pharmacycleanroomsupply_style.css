@@ -410,9 +410,6 @@ html {
   /* Internet Explorer/Edge */
   user-select: none; }
 
-.front .zone-preface-wrapper, .node-type-product-display .zone-preface-wrapper, .page-cart .zone-preface-wrapper, .page-checkout .zone-preface-wrapper {
-  display: none; }
-
 .zone-preface2-wrapper h1#page-title {
   margin: 10px;
   color: #fff; }
@@ -632,14 +629,15 @@ html {
   }
 }
 */
-.zone-preface-wrapper {
+/*.zone-preface-wrapper {
   background-image: url("/sites/pharmacycleanroomsupply.com/themes/pharmacycleanroomsupply/images/default-header-image.jpg");
   height: 160px;
   width: 100%;
-  background-repeat: no-repeat; }
-  .zone-preface-wrapper .zone-preface {
-    background: transparent; }
-
+  background-repeat: no-repeat;
+    .zone-preface {
+      background: transparent;
+    }
+}*/
 .zone-preface2-wrapper {
   background: rgba(0, 0, 0, 0.52);
   position: relative;
