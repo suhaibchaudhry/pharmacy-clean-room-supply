@@ -502,7 +502,7 @@ html {
 
     ul li a{
       color: #000;
-      font-weight: bold;
+      font-weight: normal;
     }
 	
     .item-list .item-list {
@@ -516,15 +516,15 @@ html {
 		.item-list {
 			ul li.expanded {
 				a {
-					font-weight: bold;
-					color: #009bfd;
+					//font-weight: bold;
+					//color: #009bfd;
 				}
 			}
 
 			ul li.leaf {
 				a {
-					font-weight: normal;
-					color: #000;
+					//font-weight: normal;
+					//color: #000;
 				}
 			}
 		}

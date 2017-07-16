@@ -423,16 +423,9 @@ html {
     font-weight: normal; }
   .region-sidebar-first .block-facetapi ul li a {
     color: #000;
-    font-weight: bold; }
+    font-weight: normal; }
   .region-sidebar-first .block-facetapi .item-list .item-list {
     margin-left: 20px; }
-
-.region-sidebar-first .block-facetapi .item-list ul li.expanded a {
-  font-weight: bold;
-  color: #009bfd; }
-.region-sidebar-first .block-facetapi .item-list ul li.leaf a {
-  font-weight: normal;
-  color: #000; }
 
 .page-products .view-display-products .item-list .last {
   clear: inherit;
