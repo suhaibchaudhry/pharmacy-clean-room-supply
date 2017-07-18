@@ -459,7 +459,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin: -5px 11px 0 11px;
   font-size: 18px;
-  background: #009BFD;
+  background: #ff6300;
   padding: 10px 10px 0 10px;
   border-radius: 2px 2px 0 0;
     a {
@@ -491,7 +491,7 @@ html {
 
 .region-sidebar-first {
   .block-facetapi {
-    border-top: 5px solid #009BFD;
+    border-top: 5px solid #ff6300;
     margin-top: 0;
     margin-left: 0;
     padding-left: 0;
@@ -517,7 +517,7 @@ html {
 			ul li.expanded {
 				a {
 					//font-weight: bold;
-					//color: #009bfd;
+					//color: #ff6300;
 				}
 			}
 
@@ -567,7 +567,7 @@ html {
         }
 
         .field-name-commerce-price {
-          color: #009bfd;
+          color: #ff6300;
           font-weight: bold;
           margin-bottom: 0;
         }
@@ -578,7 +578,7 @@ html {
 		}
 		.field-items a {
 			color: #fff;
-			background-color: #009bfd;
+			background-color: #ff6300;
 			padding: 10px 25px;
 			text-transform: lowercase;
 			font-size: 20px;
@@ -662,7 +662,7 @@ html {
   .email-info {
     margin-bottom: 20px;
     h1.contact-subtitle {
-      color: #009BFD;
+      color: #ff6300;
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 0;
@@ -679,7 +679,7 @@ html {
   .phone-info, .fax-info, .address-info, .socialmedia-info {
     margin-bottom: 20px;
     h1.contact-subtitle {
-      color: #009BFD;
+      color: #ff6300;
       font-size: 18px;
       font-weight: bold;
       margin-bottom: 0;
@@ -724,11 +724,11 @@ html {
         text-align: center;
       }
       a:hover {
-        color: #009bfd;
+        color: #ff6300;
       }
       &.active {
         a {
-          background-color: #009bfd;
+          background-color: #ff6300;
           &:hover {
             color: #fff;
           }
@@ -746,7 +746,7 @@ html {
         li.leaf {
           a.active, a:hover {
             border: none;
-            background: #009bfd;
+            background: #0065ff;
             border-bottom: 5px solid #2d2d2d;
             color: #fff;
             font-family: 'Open Sans', sans-serif;
@@ -771,7 +771,7 @@ html {
             }
             a.active, a:hover {
               border: none;
-              background: #009bfd;
+              background: #ff6300;
               border-bottom: 5px solid #2d2d2d;
               color: #fff;
             }
@@ -823,10 +823,6 @@ html {
 
 .zone-preface2-wrapper {
   background: rgba(0, 0, 0, 0.52);
-  position: relative;
-  left: 0;
-  right: 0;
-  bottom: 62px;
 }
 
 .zone-header {
@@ -840,11 +836,11 @@ html {
     width: auto !important;
     height: 100%;
     padding: 0 30px 0 70px;
-    border-right: #009bfd 5px solid;
+    border-right: #ff6300 5px solid;
     display: block;
 
     h2.block-title {
-      color: #009bfd;
+      color: #ff6300;
       font-weight: normal;
       border-bottom: 4px solid #ABABAB;
       padding-top: 25px;
@@ -914,7 +910,7 @@ html {
         text-align: center;
       }
       span {
-        background: #009bfd;
+        background: #ff6300;
         padding: 10px;
         font-size: 20px;
       }
@@ -961,7 +957,7 @@ html {
 
 .block-views-product-category-blocks-block {
   h2 {
-    background: #009bfd;
+    background: #ff6300;
     padding: 10px;
     margin: 0 0 10px 0;
     color: #fff;
@@ -1235,7 +1231,7 @@ html {
 
       &.active {
         a {
-          background: #009bfd !important;
+          background: #ff6300 !important;
           color: #fff !important;
         }
       }
@@ -1351,7 +1347,7 @@ html {
       background: none;
 
       input.form-submit {
-        background: #009BFD;
+        background: #0065ff;
         border-radius: inherit;
         padding: 5px 25px;
         text-transform: lowercase;
@@ -1363,13 +1359,13 @@ html {
 
   h2.field-name-title-field {
     font-weight: 100;
-    border-bottom: 3px solid #009BFD;
+    border-bottom: 3px solid #ff6300;
   }
 
   .commerce-product-field {
     .field-name-commerce-price {
       .field-item {
-        color: #009BFD;
+        color: #ff6300;
       }
     }
   }
@@ -1439,7 +1435,10 @@ html {
   .branding-data {
     padding: 0 10px;
     .logo-img {
-      width: 100%;
+      a {
+        float: left;
+        width: 334px;
+      }
     }
   }
 }
@@ -1509,7 +1508,7 @@ html {
 			.field-item a {
 				font-weight: bold;
 				font-size: 18px;
-				background: #009bfd;
+				background: #ff6300;
 				padding: 10px;
 				border-radius: 2px 2px 0 0;
 				color: #fff;
@@ -1839,4 +1838,7 @@ html {
 
 .view-display-products .more-link {
   display: none;
+}
+.view-certificates table {
+    width: 100%;
 }
