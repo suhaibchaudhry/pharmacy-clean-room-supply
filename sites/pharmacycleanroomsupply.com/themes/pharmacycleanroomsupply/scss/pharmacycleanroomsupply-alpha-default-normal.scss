@@ -127,9 +127,17 @@ div.messages.commerce-add-to-cart-confirmation .message-inner {
 .page-products {
   .view-display-products {
     li.views-row {
-      width: 244px;
-      padding: 20px;
+      float: left;
+      width: 335px;
+      //padding: 20px;
       padding-right: initial;
+      clear: none;
+      &:nth-child(3n), & {
+        margin-right: 23px;
+      }
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
     }
   }
 }

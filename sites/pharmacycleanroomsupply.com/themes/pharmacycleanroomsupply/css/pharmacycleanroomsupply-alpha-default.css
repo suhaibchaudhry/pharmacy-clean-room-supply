@@ -8,6 +8,7 @@
 * 1. Global
 * --
 **************************************************/
+/* line 13, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 .selectnav {
   display: none; }
 
@@ -19,6 +20,7 @@
 /**********************************************
 * 2.3. Zone menu
 **********************************************/
+/* line 25, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 .zone-menu .region-menu {
   margin: 0 !important;
   width: 100% !important; }
@@ -26,13 +28,16 @@
 /**
 * Navigation
 */
+/* line 32, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 .navigation {
   margin: 0;
   /* Main menu */
   /* Secondary menu */ }
+  /* line 34, ../scss/pharmacycleanroomsupply-alpha-default.scss */
   .navigation .primary-menu ul,
   .navigation .second-menu ul {
     margin: 26px 0px; }
+    /* line 38, ../scss/pharmacycleanroomsupply-alpha-default.scss */
     .navigation .primary-menu ul li.first a,
     .navigation .second-menu ul li.first a {
       -moz-border-radius: 8px 0 0 8px;
@@ -40,6 +45,7 @@
       -khtml-border-radius: 8px 0 0 8px;
       border-radius: 8px 0 0 8px;
       /* LTR */ }
+    /* line 41, ../scss/pharmacycleanroomsupply-alpha-default.scss */
     .navigation .primary-menu ul li.last a,
     .navigation .second-menu ul li.last a {
       -moz-border-radius: 0 8px 8px 0;
@@ -47,22 +53,30 @@
       -khtml-border-radius: 0 8px 8px 0;
       border-radius: 0 8px 8px 0;
       /* LTR */ }
+  /* line 47, ../scss/pharmacycleanroomsupply-alpha-default.scss */
   .navigation .primary-menu ul li a {
     background-color: #000000;
     color: #ffffff; }
+    /* line 51, ../scss/pharmacycleanroomsupply-alpha-default.scss */
     .navigation .primary-menu ul li a.active, .navigation .primary-menu ul li a:hover {
       background-color: #ffffff; }
+    /* line 55, ../scss/pharmacycleanroomsupply-alpha-default.scss */
     .navigation .primary-menu ul li a.active {
       color: #2698F2; }
+    /* line 58, ../scss/pharmacycleanroomsupply-alpha-default.scss */
     .navigation .primary-menu ul li a:hover {
       color: #000000; }
+  /* line 63, ../scss/pharmacycleanroomsupply-alpha-default.scss */
   .navigation .second-menu ul li a {
     background-color: #ffffff;
     color: #000000; }
+    /* line 67, ../scss/pharmacycleanroomsupply-alpha-default.scss */
     .navigation .second-menu ul li a.active, .navigation .second-menu ul li a:hover {
       background-color: #000000; }
+    /* line 71, ../scss/pharmacycleanroomsupply-alpha-default.scss */
     .navigation .second-menu ul li a.active {
       color: #2698F2; }
+    /* line 74, ../scss/pharmacycleanroomsupply-alpha-default.scss */
     .navigation .second-menu ul li a:hover {
       color: #ffffff; }
 
@@ -81,12 +95,14 @@
 * Blocks
 */
 /* HP blocks: Top advert */
+/* line 94, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 #promotional_banner {
   padding-bottom: 10px;
   left: -10px;
   /* LTR */
   width: 100%; }
 
+/* line 100, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 .block-shipping-discount {
   /* HP blocks: Side advert */
   position: absolute;
@@ -94,6 +110,7 @@
   /* LTR */
   top: 85px;
   z-index: 100; }
+  /* line 106, ../scss/pharmacycleanroomsupply-alpha-default.scss */
   .block-shipping-discount #shipping {
     border-color: #FFF;
     -moz-border-radius: 80px;
@@ -117,42 +134,58 @@
 /**
 * Collection page
 */
+/* line 129, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 .view-collection-taxonomy-term .view-content .item-list h3 span {
   top: -90px; }
 
+/* line 135, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 body {
   background: #fff; }
 
+/* line 139, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 .zone-header {
   width: 100%; }
 
+/* line 145, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 .section-footer .block-menu-footer-navigation li.expanded {
   text-align: initial;
   width: 25%; }
+  /* line 148, ../scss/pharmacycleanroomsupply-alpha-default.scss */
   .section-footer .block-menu-footer-navigation li.expanded span {
     font-size: initial; }
+  /* line 151, ../scss/pharmacycleanroomsupply-alpha-default.scss */
   .section-footer .block-menu-footer-navigation li.expanded ul.menu {
     text-align: initial; }
 
+/* line 160, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 #region-branding .branding-data .logo-img {
   width: 50%; }
 
+/* line 166, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 #block-menu-menu-main-navigation {
   display: block; }
 
+/* line 170, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 #block-tb-megamenu-menu-main-navigation {
   display: none; }
 
+/* line 174, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 #block-menu-menu-user-menu {
   float: initial; }
 
+/* line 179, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 #block-views-exp-display-products-page .views-exposed-widgets {
   float: right;
   margin-right: 10px; }
+  /* line 182, ../scss/pharmacycleanroomsupply-alpha-default.scss */
   #block-views-exp-display-products-page .views-exposed-widgets .views-submit-button {
     right: -36px; }
 
+/* line 190, ../scss/pharmacycleanroomsupply-alpha-default.scss */
 .page-products .view-display-products li.views-row {
-  width: 244px;
-  padding: 20px;
-  padding-right: initial; }
+  width: 273px;
+  padding-right: initial;
+  margin-right: 23px; }
+  /* line 195, ../scss/pharmacycleanroomsupply-alpha-default.scss */
+  .page-products .view-display-products li.views-row:nth-child(3n) {
+    margin-right: 0; }

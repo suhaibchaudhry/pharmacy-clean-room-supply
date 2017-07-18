@@ -13,19 +13,23 @@
 * 3.2.2. Content
 *******************************************/
 /* HP blocks: Slideshow */
+/* line 18, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
 #block-views-demo-content-slideshow-block-1 .event-slider .views-field-nothing,
 #block-views-demo-content-slideshow-block-1 .view-display-id-block_1 .bx-prev,
 #block-views-demo-content-slideshow-block-1 .view-display-id-block_1 .bx-next {
   border: 0;
   width: 320px; }
+/* line 24, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
 #block-views-demo-content-slideshow-block-1 .event-slider .views-field-nothing {
   background: transparent url("../images/bg_title_slideshow_current.png") left top no-repeat;
   left: 32.5%;
   /* LTR */ }
+/* line 28, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
 #block-views-demo-content-slideshow-block-1 .bx-prev,
 #block-views-demo-content-slideshow-block-1 .bx-prev:hover {
   background: transparent url("../images/bg_title_slideshow_previous.png") left top no-repeat;
   /* LTR */ }
+/* line 32, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
 #block-views-demo-content-slideshow-block-1 .bx-next,
 #block-views-demo-content-slideshow-block-1 .bx-next:hover {
   background: transparent url("../images/bg_title_slideshow_next.png") left top no-repeat;
@@ -44,6 +48,7 @@
 /**
 * Connect with us
 */
+/* line 50, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
 #block-menu-menu-social-connection h2 {
   background: url("../images/bg_block_footer_title.png") left top no-repeat;
   /* LTR */
@@ -60,6 +65,7 @@
 /**
 * Add to cart popin.
 */
+/* line 67, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
 div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper {
   float: none;
   min-height: 210px;
@@ -67,39 +73,58 @@ div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper {
   position: absolute;
   right: 0;
   /* LTR */ }
+/* line 74, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
 div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display {
   float: left;
   /* LTR */ }
+  /* line 76, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
   div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content {
     padding-bottom: 20px; }
 
+/* line 85, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
 .section-footer .block-menu-footer-navigation li.expanded {
   text-align: initial;
   width: 25%; }
+  /* line 88, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
   .section-footer .block-menu-footer-navigation li.expanded span {
     font-size: initial; }
+  /* line 91, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
   .section-footer .block-menu-footer-navigation li.expanded ul.menu {
     text-align: initial; }
 
+/* line 100, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
 #region-branding .branding-data .logo-img {
   width: 50%; }
 
+/* line 106, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
 #block-menu-menu-main-navigation {
   display: block; }
 
+/* line 110, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
 #block-tb-megamenu-menu-main-navigation {
   display: none; }
 
+/* line 113, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
 #block-menu-menu-user-menu {
   float: initial; }
 
+/* line 118, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
 #block-views-exp-display-products-page .views-exposed-widgets {
   float: right;
   margin-right: 10px; }
+  /* line 121, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
   #block-views-exp-display-products-page .views-exposed-widgets .views-submit-button {
     right: -36px; }
 
+/* line 129, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
 .page-products .view-display-products li.views-row {
-  width: 244px;
-  padding: 20px;
-  padding-right: initial; }
+  float: left;
+  width: 335px;
+  padding-right: initial;
+  clear: none; }
+  /* line 135, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
+  .page-products .view-display-products li.views-row:nth-child(3n), .page-products .view-display-products li.views-row {
+    margin-right: 23px; }
+  /* line 138, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
+  .page-products .view-display-products li.views-row:nth-child(2n) {
+    margin-right: 0; }

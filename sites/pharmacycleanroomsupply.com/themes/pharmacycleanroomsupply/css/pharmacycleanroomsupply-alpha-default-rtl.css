@@ -4,12 +4,14 @@
 /**
 * Navigation
 */
+/* line 12, ../scss/pharmacycleanroomsupply-alpha-default-rtl.scss */
 .navigation .primary-menu ul li.first a,
 .navigation .second-menu ul li.first a {
   -moz-border-radius: 0 8px 8px 0 !important;
   -webkit-border-radius: 0 8px 8px 0 !important;
   -khtml-border-radius: 0 8px 8px 0 !important;
   border-radius: 0 8px 8px 0 !important; }
+/* line 15, ../scss/pharmacycleanroomsupply-alpha-default-rtl.scss */
 .navigation .primary-menu ul li.last a,
 .navigation .second-menu ul li.last a {
   -moz-border-radius: 8px 0 0 8px !important;
@@ -21,10 +23,12 @@
 * Blocks
 */
 /* HP blocks: Top advert */
+/* line 25, ../scss/pharmacycleanroomsupply-alpha-default-rtl.scss */
 #promotional_banner {
   left: auto;
   right: -10px; }
 
+/* line 29, ../scss/pharmacycleanroomsupply-alpha-default-rtl.scss */
 .block-shipping-discount {
   left: auto;
   right: -50px; }

@@ -188,9 +188,13 @@ body {
 .page-products {
   .view-display-products {
     li.views-row {
-      width: 244px;
-      padding: 20px;
+      width: 273px;
+      //padding: 20px;
       padding-right: initial;
+      margin-right: 23px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
     }
   }
 }

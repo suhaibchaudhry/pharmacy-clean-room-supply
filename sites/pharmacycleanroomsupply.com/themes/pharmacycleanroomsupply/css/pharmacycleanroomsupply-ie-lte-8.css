@@ -9,6 +9,7 @@
 /**
 * Menu footer navigation
 */
+/* line 12, ../scss/pharmacycleanroomsupply-ie-lte-8.scss */
 .section-footer ul.menu li {
   padding-right: 15px;
   /* LTR */ }
@@ -16,6 +17,7 @@
 /**
 * Connect with us
 */
+/* line 18, ../scss/pharmacycleanroomsupply-ie-lte-8.scss */
 .block-social h2 {
   line-height: 22px; }
 
@@ -27,11 +29,13 @@
 /**********************************************
 * 5.2. All products page
 **********************************************/
+/* line 29, ../scss/pharmacycleanroomsupply-ie-lte-8.scss */
 .page-products .view-display-products {
   clear: both;
   width: 700px;
   margin-top: 40px; }
 
+/* line 34, ../scss/pharmacycleanroomsupply-ie-lte-8.scss */
 .page-products .view-display-products ul li.views-row {
   display: block;
   height: auto;
@@ -43,13 +47,16 @@
 /**********************************************
 * 5.3. Product page
 **********************************************/
+/* line 44, ../scss/pharmacycleanroomsupply-ie-lte-8.scss */
 .commerce-add-to-cart-confirmation .field-type-taxonomy-term-reference:after {
   clear: none !important; }
 
+/* line 47, ../scss/pharmacycleanroomsupply-ie-lte-8.scss */
 .commerce-add-to-cart-confirmation .field-name-field-images img {
   max-width: none; }
 
 /* Cloud zoom */
+/* line 51, ../scss/pharmacycleanroomsupply-ie-lte-8.scss */
 .node-product-type .cloud-zoom-gallery-thumbs {
   position: absolute;
   top: 0;
@@ -57,16 +64,19 @@
   /* LTR */
   width: 120px; }
 
+/* line 57, ../scss/pharmacycleanroomsupply-ie-lte-8.scss */
 .node-product-type .cloud-zoom-container {
   margin-left: 130px;
   /* LTR */
   position: relative; }
 
+/* line 61, ../scss/pharmacycleanroomsupply-ie-lte-8.scss */
 .commerce-add-to-cart-confirmation .message-inner {
   position: relative; }
 
 /**********************************************
 * 5.4. Checkout process
 **********************************************/
+/* line 67, ../scss/pharmacycleanroomsupply-ie-lte-8.scss */
 .page-cart .entity-commerce-product .content .field-name-field-images img {
   max-width: none; }

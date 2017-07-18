@@ -9,19 +9,23 @@
 /*******************************************
 * 2.1.1. Region user first
 *******************************************/
+/* line 12, ../scss/pharmacycleanroomsupply-alpha-default-normal-rtl.scss */
 .block-menu-user-menu .block-inner {
   float: left;
   margin-left: 10px;
   margin-right: 0px; }
 
 /* HP blocks: Slideshow */
+/* line 21, ../scss/pharmacycleanroomsupply-alpha-default-normal-rtl.scss */
 #block-views-demo-content-slideshow-block-1 .event-slider .views-field-nothing {
   background: transparent url("../images/bg_title_slideshow_current.png") right top no-repeat;
   left: auto;
   right: 31%; }
+/* line 26, ../scss/pharmacycleanroomsupply-alpha-default-normal-rtl.scss */
 #block-views-demo-content-slideshow-block-1 .bx-prev,
 #block-views-demo-content-slideshow-block-1 .bx-prev:hover {
   background: transparent url("../images/bg_title_slideshow_next.png") right top no-repeat; }
+/* line 30, ../scss/pharmacycleanroomsupply-alpha-default-normal-rtl.scss */
 #block-views-demo-content-slideshow-block-1 .bx-next,
 #block-views-demo-content-slideshow-block-1 .bx-next:hover {
   background: transparent url("../images/bg_title_slideshow_previous.png") right top no-repeat;
@@ -31,17 +35,21 @@
 /**
 * Connect with us
 */
+/* line 41, ../scss/pharmacycleanroomsupply-alpha-default-normal-rtl.scss */
 #block-menu-menu-social-connection h2 {
   background: url("../images/bg_block_footer_title-rtl.png") right top no-repeat; }
 
 /**
 * Add to cart popin.
 */
+/* line 49, ../scss/pharmacycleanroomsupply-alpha-default-normal-rtl.scss */
 div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper {
   left: 0;
   right: auto; }
+/* line 53, ../scss/pharmacycleanroomsupply-alpha-default-normal-rtl.scss */
 div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display {
   float: right; }
+  /* line 56, ../scss/pharmacycleanroomsupply-alpha-default-normal-rtl.scss */
   div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-message-product-display .view-content {
     margin-left: 0;
     margin-right: 130px; }
