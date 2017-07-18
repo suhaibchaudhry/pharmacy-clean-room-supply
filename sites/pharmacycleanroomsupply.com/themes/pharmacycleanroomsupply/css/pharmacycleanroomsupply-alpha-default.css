@@ -180,12 +180,3 @@ body {
   /* line 182, ../scss/pharmacycleanroomsupply-alpha-default.scss */
   #block-views-exp-display-products-page .views-exposed-widgets .views-submit-button {
     right: -36px; }
-
-/* line 190, ../scss/pharmacycleanroomsupply-alpha-default.scss */
-.page-products .view-display-products li.views-row {
-  width: 273px;
-  padding-right: initial;
-  margin-right: 23px; }
-  /* line 195, ../scss/pharmacycleanroomsupply-alpha-default.scss */
-  .page-products .view-display-products li.views-row:nth-child(3n) {
-    margin-right: 0; }

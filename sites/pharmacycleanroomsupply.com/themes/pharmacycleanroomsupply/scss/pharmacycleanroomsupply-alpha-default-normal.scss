@@ -132,12 +132,6 @@ div.messages.commerce-add-to-cart-confirmation .message-inner {
       //padding: 20px;
       padding-right: initial;
       clear: none;
-      &:nth-child(3n), & {
-        margin-right: 23px;
-      }
-      &:nth-child(2n) {
-        margin-right: 0;
-      }
     }
   }
 }

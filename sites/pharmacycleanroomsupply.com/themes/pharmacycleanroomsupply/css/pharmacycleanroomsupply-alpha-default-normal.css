@@ -122,9 +122,3 @@ div.messages.commerce-add-to-cart-confirmation .message-inner .view-confirm-mess
   width: 335px;
   padding-right: initial;
   clear: none; }
-  /* line 135, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
-  .page-products .view-display-products li.views-row:nth-child(3n), .page-products .view-display-products li.views-row {
-    margin-right: 23px; }
-  /* line 138, ../scss/pharmacycleanroomsupply-alpha-default-normal.scss */
-  .page-products .view-display-products li.views-row:nth-child(2n) {
-    margin-right: 0; }

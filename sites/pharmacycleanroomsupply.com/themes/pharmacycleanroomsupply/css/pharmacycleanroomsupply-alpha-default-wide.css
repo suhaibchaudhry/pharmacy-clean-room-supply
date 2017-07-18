@@ -1,1 +1,9 @@
 /* This file will hold styles that are loaded using the same media query as the wide grid. */
+/* line 4, ../scss/pharmacycleanroomsupply-alpha-default-wide.scss */
+.page-products .view-display-products li.views-row {
+  width: 273px;
+  padding-right: initial;
+  margin-right: 23px; }
+  /* line 9, ../scss/pharmacycleanroomsupply-alpha-default-wide.scss */
+  .page-products .view-display-products li.views-row:nth-child(3n) {
+    margin-right: 0; }

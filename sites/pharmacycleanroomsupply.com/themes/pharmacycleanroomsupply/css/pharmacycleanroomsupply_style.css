@@ -1223,45 +1223,44 @@ html {
 /* line 1439, ../scss/pharmacycleanroomsupply_style.scss */
 #region-branding .branding-data {
   padding: 0 10px; }
-  /* line 1442, ../scss/pharmacycleanroomsupply_style.scss */
-  #region-branding .branding-data .logo-img a {
-    float: left;
-    width: 334px; }
+  /* line 1441, ../scss/pharmacycleanroomsupply_style.scss */
+  #region-branding .branding-data .logo-img {
+    width: 100%; }
 
-/* line 1450, ../scss/pharmacycleanroomsupply_style.scss */
+/* line 1447, ../scss/pharmacycleanroomsupply_style.scss */
 #block-menu-menu-user-menu {
   float: right; }
 
-/* line 1458, ../scss/pharmacycleanroomsupply_style.scss */
+/* line 1455, ../scss/pharmacycleanroomsupply_style.scss */
 .page-checkout #commerce-checkout-form-checkout #customer-profile-shipping-ajax-wrapper #customer-profile-shipping-field-po-number-add-more-wrapper label {
   width: 8%; }
 
-/* line 1468, ../scss/pharmacycleanroomsupply_style.scss */
+/* line 1465, ../scss/pharmacycleanroomsupply_style.scss */
 .page-user-register #user-register-form fieldset#edit-profile-main {
   padding-left: 30px;
   padding-top: 45px; }
-  /* line 1472, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1469, ../scss/pharmacycleanroomsupply_style.scss */
   .page-user-register #user-register-form fieldset#edit-profile-main legend {
     display: none; }
 
-/* line 1481, ../scss/pharmacycleanroomsupply_style.scss */
+/* line 1478, ../scss/pharmacycleanroomsupply_style.scss */
 .not-logged-in .view-display-products .commerce-product-field-commerce-price, .not-logged-in .node-product-display .commerce-product-field-commerce-price {
   display: none; }
-/* line 1485, ../scss/pharmacycleanroomsupply_style.scss */
+/* line 1482, ../scss/pharmacycleanroomsupply_style.scss */
 .not-logged-in .view-display-products .field-name-field-manufacturer, .not-logged-in .node-product-display .field-name-field-manufacturer {
   display: none; }
-/* line 1489, ../scss/pharmacycleanroomsupply_style.scss */
+/* line 1486, ../scss/pharmacycleanroomsupply_style.scss */
 .not-logged-in .view-display-products input.form-submit, .not-logged-in .node-product-display input.form-submit {
   display: none; }
 
-/* line 1498, ../scss/pharmacycleanroomsupply_style.scss */
+/* line 1495, ../scss/pharmacycleanroomsupply_style.scss */
 .not-logged-in .view-display-products li.views-row article {
   height: 380px !important; }
 
-/* line 1508, ../scss/pharmacycleanroomsupply_style.scss */
+/* line 1505, ../scss/pharmacycleanroomsupply_style.scss */
 .not-logged-in .node-product-display .field-name-field-special-pricing .field-label {
   display: none; }
-/* line 1512, ../scss/pharmacycleanroomsupply_style.scss */
+/* line 1509, ../scss/pharmacycleanroomsupply_style.scss */
 .not-logged-in .node-product-display .field-name-field-special-pricing .field-item a {
   font-weight: bold;
   font-size: 18px;
@@ -1270,223 +1269,223 @@ html {
   border-radius: 2px 2px 0 0;
   color: #fff; }
 
-/* line 1525, ../scss/pharmacycleanroomsupply_style.scss */
+/* line 1522, ../scss/pharmacycleanroomsupply_style.scss */
 .not-logged-in #block-views-product-tabs-content-block {
   display: none; }
-/* line 1529, ../scss/pharmacycleanroomsupply_style.scss */
+/* line 1526, ../scss/pharmacycleanroomsupply_style.scss */
 .not-logged-in .node-product-display .commerce-product-sku {
   display: none; }
 
-/* line 1536, ../scss/pharmacycleanroomsupply_style.scss */
+/* line 1533, ../scss/pharmacycleanroomsupply_style.scss */
 .logged-in #block-block-8 {
   display: none; }
-/* line 1540, ../scss/pharmacycleanroomsupply_style.scss */
+/* line 1537, ../scss/pharmacycleanroomsupply_style.scss */
 .logged-in .node-product-display .field-name-field-special-pricing {
   display: none; }
 
 @media (min-width: 320px) and (max-width: 359px) {
-  /* line 1548, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1545, ../scss/pharmacycleanroomsupply_style.scss */
   header#section-header .top-phone-wrapper {
     float: right;
     width: 100%; }
 
-  /* line 1554, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1551, ../scss/pharmacycleanroomsupply_style.scss */
   #region-user-second {
     width: 80%; }
-    /* line 1557, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1554, ../scss/pharmacycleanroomsupply_style.scss */
     #region-user-second .commerce-ajax-cart-processed-processed {
       width: 100%;
       float: none; }
 
-  /* line 1563, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1560, ../scss/pharmacycleanroomsupply_style.scss */
   #zone-menu-wrapper {
     text-align: center; }
-    /* line 1566, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1563, ../scss/pharmacycleanroomsupply_style.scss */
     #zone-menu-wrapper .block-block-8 {
       margin-bottom: 20px;
       width: 85%; }
 
-  /* line 1573, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1570, ../scss/pharmacycleanroomsupply_style.scss */
   .front .zone-header-wrapper {
     display: none; }
 
-  /* line 1579, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1576, ../scss/pharmacycleanroomsupply_style.scss */
   .block-views-product-category-blocks-block .views-row {
     width: 100% !important; }
-    /* line 1583, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1580, ../scss/pharmacycleanroomsupply_style.scss */
     .block-views-product-category-blocks-block .views-row .field-item img {
       width: 100% !important; }
 
-  /* line 1591, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1588, ../scss/pharmacycleanroomsupply_style.scss */
   .block-webform-client-block-18 h2 {
     text-align: center; }
-  /* line 1596, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1593, ../scss/pharmacycleanroomsupply_style.scss */
   .block-webform-client-block-18 .form-item input {
     width: 89% !important; } }
 @media (min-width: 360px) and (max-width: 374px) {
-  /* line 1605, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1602, ../scss/pharmacycleanroomsupply_style.scss */
   header#section-header .top-phone-wrapper {
     float: right;
     width: 100%; }
 
-  /* line 1611, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1608, ../scss/pharmacycleanroomsupply_style.scss */
   #region-user-second {
     width: 80%; }
-    /* line 1614, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1611, ../scss/pharmacycleanroomsupply_style.scss */
     #region-user-second .commerce-ajax-cart-processed-processed {
       width: 100%;
       float: none; }
 
-  /* line 1620, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1617, ../scss/pharmacycleanroomsupply_style.scss */
   #zone-menu-wrapper {
     text-align: center; }
-    /* line 1623, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1620, ../scss/pharmacycleanroomsupply_style.scss */
     #zone-menu-wrapper .block-block-8 {
       margin-bottom: 20px;
       width: 85%; }
 
-  /* line 1630, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1627, ../scss/pharmacycleanroomsupply_style.scss */
   .front .zone-header-wrapper {
     display: none; }
 
-  /* line 1636, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1633, ../scss/pharmacycleanroomsupply_style.scss */
   .block-views-product-category-blocks-block .views-row {
     width: 100% !important; }
-    /* line 1640, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1637, ../scss/pharmacycleanroomsupply_style.scss */
     .block-views-product-category-blocks-block .views-row .field-item img {
       width: 100% !important; }
 
-  /* line 1648, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1645, ../scss/pharmacycleanroomsupply_style.scss */
   .block-webform-client-block-18 h2 {
     text-align: center; }
-  /* line 1653, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1650, ../scss/pharmacycleanroomsupply_style.scss */
   .block-webform-client-block-18 .form-item input {
     width: 89% !important; } }
 @media (min-width: 375px) and (max-width: 410px) {
-  /* line 1662, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1659, ../scss/pharmacycleanroomsupply_style.scss */
   header#section-header .top-phone-wrapper {
     float: right;
     width: 100%; }
 
-  /* line 1668, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1665, ../scss/pharmacycleanroomsupply_style.scss */
   #region-user-second {
     width: 80%; }
-    /* line 1671, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1668, ../scss/pharmacycleanroomsupply_style.scss */
     #region-user-second .commerce-ajax-cart-processed-processed {
       width: 100%;
       float: none; }
 
-  /* line 1677, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1674, ../scss/pharmacycleanroomsupply_style.scss */
   #zone-menu-wrapper {
     text-align: center; }
-    /* line 1680, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1677, ../scss/pharmacycleanroomsupply_style.scss */
     #zone-menu-wrapper .block-block-8 {
       margin-bottom: 20px;
       width: 85%; }
 
-  /* line 1687, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1684, ../scss/pharmacycleanroomsupply_style.scss */
   .front .zone-header-wrapper {
     display: none; }
 
-  /* line 1693, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1690, ../scss/pharmacycleanroomsupply_style.scss */
   .block-views-product-category-blocks-block .views-row {
     width: 100% !important; }
-    /* line 1697, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1694, ../scss/pharmacycleanroomsupply_style.scss */
     .block-views-product-category-blocks-block .views-row .field-item img {
       width: 100% !important; }
 
-  /* line 1705, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1702, ../scss/pharmacycleanroomsupply_style.scss */
   .block-webform-client-block-18 h2 {
     text-align: center; }
-  /* line 1710, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1707, ../scss/pharmacycleanroomsupply_style.scss */
   .block-webform-client-block-18 .form-item input {
     width: 89% !important; } }
 @media (min-width: 411px) and (max-width: 434px) {
-  /* line 1719, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1716, ../scss/pharmacycleanroomsupply_style.scss */
   header#section-header .top-phone-wrapper {
     float: right;
     width: 100%; }
 
-  /* line 1725, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1722, ../scss/pharmacycleanroomsupply_style.scss */
   #region-user-second {
     width: 80%; }
-    /* line 1728, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1725, ../scss/pharmacycleanroomsupply_style.scss */
     #region-user-second .commerce-ajax-cart-processed-processed {
       width: 100%;
       float: none; }
 
-  /* line 1735, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1732, ../scss/pharmacycleanroomsupply_style.scss */
   #region-user-first #block-block-1 {
     width: 100%; }
 
-  /* line 1740, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1737, ../scss/pharmacycleanroomsupply_style.scss */
   #zone-menu-wrapper {
     text-align: center; }
-    /* line 1743, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1740, ../scss/pharmacycleanroomsupply_style.scss */
     #zone-menu-wrapper .block-block-8 {
       margin-bottom: 20px;
       width: 85%; }
 
-  /* line 1750, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1747, ../scss/pharmacycleanroomsupply_style.scss */
   .front .zone-header-wrapper {
     display: none; }
 
-  /* line 1756, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1753, ../scss/pharmacycleanroomsupply_style.scss */
   .block-views-product-category-blocks-block .views-row {
     width: 100% !important; }
-    /* line 1760, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1757, ../scss/pharmacycleanroomsupply_style.scss */
     .block-views-product-category-blocks-block .views-row .field-item img {
       width: 100% !important; }
 
-  /* line 1768, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1765, ../scss/pharmacycleanroomsupply_style.scss */
   .block-webform-client-block-18 h2 {
     text-align: center; }
-  /* line 1773, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1770, ../scss/pharmacycleanroomsupply_style.scss */
   .block-webform-client-block-18 .form-item input {
     width: 89% !important; } }
 @media (min-width: 435px) and (max-width: 437px) {
-  /* line 1782, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1779, ../scss/pharmacycleanroomsupply_style.scss */
   header#section-header .top-phone-wrapper {
     float: right;
     width: 100%; }
 
-  /* line 1788, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1785, ../scss/pharmacycleanroomsupply_style.scss */
   #region-user-second {
     width: 80%; }
-    /* line 1791, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1788, ../scss/pharmacycleanroomsupply_style.scss */
     #region-user-second .commerce-ajax-cart-processed-processed {
       width: 100%;
       float: none; }
 
-  /* line 1798, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1795, ../scss/pharmacycleanroomsupply_style.scss */
   #region-user-first #block-block-1 {
     width: 100%; }
 
-  /* line 1803, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1800, ../scss/pharmacycleanroomsupply_style.scss */
   #zone-menu-wrapper {
     text-align: center; }
-    /* line 1806, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1803, ../scss/pharmacycleanroomsupply_style.scss */
     #zone-menu-wrapper .block-block-8 {
       margin-bottom: 20px;
       width: 85%; }
 
-  /* line 1813, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1810, ../scss/pharmacycleanroomsupply_style.scss */
   .front .zone-header-wrapper {
     display: none; }
 
-  /* line 1819, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1816, ../scss/pharmacycleanroomsupply_style.scss */
   .block-views-product-category-blocks-block .views-row {
     width: 100% !important; }
-    /* line 1823, ../scss/pharmacycleanroomsupply_style.scss */
+    /* line 1820, ../scss/pharmacycleanroomsupply_style.scss */
     .block-views-product-category-blocks-block .views-row .field-item img {
       width: 100% !important; }
 
-  /* line 1831, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1828, ../scss/pharmacycleanroomsupply_style.scss */
   .block-webform-client-block-18 h2 {
     text-align: center; }
-  /* line 1836, ../scss/pharmacycleanroomsupply_style.scss */
+  /* line 1833, ../scss/pharmacycleanroomsupply_style.scss */
   .block-webform-client-block-18 .form-item input {
     width: 89% !important; } }
-/* line 1843, ../scss/pharmacycleanroomsupply_style.scss */
+/* line 1840, ../scss/pharmacycleanroomsupply_style.scss */
 .view-display-products .more-link {
   display: none; }
