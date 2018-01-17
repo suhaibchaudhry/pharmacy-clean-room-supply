@@ -57,7 +57,7 @@ body {
   display: block; }
 
 /* line 64, ../scss/pharmacycleanroomsupply_style.scss */
-a:link, a:visited {
+a:link, a:visited, #region-breadcrumb .pseudo-breadcrumb-total-results em {
   color: #0065ff; }
 
 /**************************************************
