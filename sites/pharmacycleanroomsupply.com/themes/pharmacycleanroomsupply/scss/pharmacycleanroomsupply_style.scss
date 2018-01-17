@@ -105,7 +105,7 @@ body {
   background-image: url('../images/picto_cart.png');
 
   .view-shopping-cart .line-item-summary ul.links {
-    background-color: #2698F2;
+    background-color: #0065ff;
   }
 }
 /**************************************************
@@ -154,7 +154,7 @@ body {
 */
 #promotional_banner {
 /* HP blocks: Top advert */
-  background-color: #2698F2;
+  background-color: #0065ff;
   color: #FFFFFF;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -174,7 +174,7 @@ body {
     background-color: #FFFFFF;
     border: 1px solid #CCC;
     @include rounded-corners(4px);
-    color: #2698F2;
+    color: #0065ff;
     font-size: 14px;
     font-weight: 700;
     padding: 4px 12px;
@@ -189,7 +189,7 @@ body {
   #shipping {
     background-color: #000000;
     border: 6px solid #ffffff;
-    color: #2698F2;
+    color: #0065ff;
     display: block;
     font-size: 13px;
     line-height: 24px;
@@ -385,11 +385,11 @@ div.messages.commerce-add-to-cart-confirmation {
 
   .message-inner {
     .added-product-title {
-      color: #2698f2;
+      color: #0065ff;
     }
     .button-wrapper .button {
       &.checkout {
-        background-color: #2698F2;
+        background-color: #0065ff;
       }
       &.continue {
         background-color: #b3b3b3;

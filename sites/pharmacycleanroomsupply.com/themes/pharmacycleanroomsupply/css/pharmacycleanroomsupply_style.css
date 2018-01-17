@@ -105,7 +105,7 @@ body {
   background-image: url("../images/picto_cart.png"); }
   /* line 107, ../scss/pharmacycleanroomsupply_style.scss */
   .block-shopping-cart-block .content .view-shopping-cart .line-item-summary ul.links {
-    background-color: #2698F2; }
+    background-color: #0065ff; }
 
 /**************************************************
 * --
@@ -152,7 +152,7 @@ body {
 /* line 155, ../scss/pharmacycleanroomsupply_style.scss */
 #promotional_banner {
   /* HP blocks: Top advert */
-  background-color: #2698F2;
+  background-color: #0065ff;
   color: #FFFFFF;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -176,7 +176,7 @@ body {
     -webkit-border-radius: 4px;
     -khtml-border-radius: 4px;
     border-radius: 4px;
-    color: #2698F2;
+    color: #0065ff;
     font-size: 14px;
     font-weight: 700;
     padding: 4px 12px;
@@ -193,7 +193,7 @@ body {
   .block-shipping-discount #shipping {
     background-color: #000000;
     border: 6px solid #ffffff;
-    color: #2698F2;
+    color: #0065ff;
     display: block;
     font-size: 13px;
     line-height: 24px;
@@ -388,10 +388,10 @@ div.messages.commerce-add-to-cart-confirmation {
   border-color: #6bb0cb; }
   /* line 387, ../scss/pharmacycleanroomsupply_style.scss */
   div.messages.commerce-add-to-cart-confirmation .message-inner .added-product-title {
-    color: #2698f2; }
+    color: #0065ff; }
   /* line 391, ../scss/pharmacycleanroomsupply_style.scss */
   div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper .button.checkout {
-    background-color: #2698F2; }
+    background-color: #0065ff; }
   /* line 394, ../scss/pharmacycleanroomsupply_style.scss */
   div.messages.commerce-add-to-cart-confirmation .message-inner .button-wrapper .button.continue {
     background-color: #b3b3b3; }
