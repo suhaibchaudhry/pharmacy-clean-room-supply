@@ -3,8 +3,7 @@
     <head<?php print $rdf->profile; ?>>
         
          <?php if ($_SERVER['HTTP_HOST'] == 'www.pharmacycleanroomsupply.com' && $_SERVER['REQUEST_URI'] == '/') { ?>
-            <title>Pharmacy Cleanroom Supply | Medical Equipments and Supplies</title>
-            <meta name="description" content="Pharmacy Cleanroom is your exclusive supplier of various medical equipments and supplies including healthcare, IV infusion, Janitorial etc. Call: (409)6591309" />
+            <title>Pharmacy Cleanroom Supply | Medical Equipments and Supplies</title> 
         <?php } else { ?>
             <title><?php print $head_title; ?></title>  
         <?php } ?>
