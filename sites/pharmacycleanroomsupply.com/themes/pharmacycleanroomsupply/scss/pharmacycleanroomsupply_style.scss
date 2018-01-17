@@ -64,6 +64,7 @@ body {
 a:link, a:visited, #region-breadcrumb .pseudo-breadcrumb-total-results em {
     color: #0065ff;
 }
+
 /**************************************************
 * --
 * 2. Section header
@@ -875,9 +876,10 @@ html {
     margin: 3px 0 0 0;
   }
   .top-phone-wrapper {
-    background: #2d2d2d;
-    color: #fff;
+    background: transparent;
+    color: #0065ff; 
     float: left;
+    font-weight: bold;
     .top-phone-icon {
       background-image: url("../images/phone-icon.png");
       text-indent: -9999px;
