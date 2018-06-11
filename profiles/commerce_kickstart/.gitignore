@@ -5,3 +5,4 @@
 !.htaccess
 nbproject/
 *.kpf
+tests/behat/failures
