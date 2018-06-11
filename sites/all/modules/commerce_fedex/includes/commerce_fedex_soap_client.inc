@@ -141,7 +141,7 @@ function commerce_fedex_submit_soap_request($request, $method = 'getRates') {
         watchdog('fedex', 'FedEx API @severity (@code)' . PHP_EOL . '<br/><b>Source:</b> @source<br/><b>Message:</b> @message<br/><b>Localized Message:</b> @localized_message',
           array('@severity' => $notification->Severity, '@code' => $notification->Code,
             '@source' => $notification->Source, '@message' => $notification->Message,
-            '@localized_message' => ( isset($notification->LocalizedMessage) ? $notification->LocalizedMessage : '' ) ), $watchdog_severity );
+            '@localized_message' => $notification->LocalizedMessage), $watchdog_severity );
       }
     }
   } catch (SoapFault $exception) {
@@ -255,7 +255,9 @@ function _commerce_fedex_get_recipient($order, $order_wrapper) {
     $shipping_address = $order_wrapper->{$field_name}->commerce_customer_address->value();
   }
   else {
-    $shipping_address = addressfield_default_values();
+    $field = field_info_field('commerce_customer_address');
+    $instance = field_info_instance('commerce_customer_profile', $field['field_name'], 'shipping');
+    $shipping_address = addressfield_default_values($field, $instance);
   }
   $recipient = array(
     'Contact' => array(
